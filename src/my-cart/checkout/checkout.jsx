@@ -15,7 +15,7 @@ import CartIncDecCounter from "../cartProductIncDec";
 import { createOrder, getAddress } from "../../apiCalls";
 // import { Container } from "react-bootstrap";
 import { toast } from "react-toastify";
-// import { displayRazorpay } from "../Razorpay";
+import { displayRazorpay } from "../Razorpay";
 
 function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, cartTotal, setCartTotal, setCartSubTotal, cartSubTotal, discountAmount }) {
   // static propTypes = {};
@@ -46,7 +46,7 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
     else if(PaymentType===""){
       toast.warning("Please Select Payment Method.")
     }
-    else {
+    else if( PaymentType ==="COD") {
       orderData.token = sessionStorage.getItem("token") ||""
       const re= await createOrder(orderData)
       const reMessage = re.status[0].Message
@@ -61,9 +61,10 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
       console.log(re)
 
     }
-    // else{
-    //   displayRazorpay(orderData)
-    // }
+    else{
+      orderData.token = sessionStorage.getItem("token") ||""
+      displayRazorpay(orderData)
+    }
     console.log(orderData)
   }
   

@@ -496,7 +496,7 @@ function OffCanvasExample({ name, ...props }) {
 }
 
 function Shop() {
-  const [ dispatch] = useStateValue();
+  const [ ,dispatch] = useStateValue();
 
   const [products, setProducts] = useState([]);
 

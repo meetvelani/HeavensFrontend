@@ -27,7 +27,7 @@ export async function displayRazorpay(orderData) {
     }
 
     // creating a new order
-    const token = localStorage.getItem("token")
+    const token = sessionStorage.getItem("token")
     const result = await createPaymentOrder(token, orderData.totalAmount);
     console.log(result)
     const order = result["order"]
@@ -55,11 +55,11 @@ export async function displayRazorpay(orderData) {
                 razorpaySignature: response.razorpay_signature,
             };
             orderData.paymentId = data.razorpayPaymentId
-            orderData.orderId = data.razorpayOrderId
+            orderData.paymentOrderId = data.razorpayOrderId
             const orderRe = await createOrder(orderData);
             if (orderRe["status"][0]["Message"] === "Successfully Order Created.") {
                 toast.success(orderRe["status"][0]["Message"])
-                window.location.href = "/order-placed/"+ orderData.address +"/"+ orderData.phoneNumber;;
+                window.location.href = "/your-orders";
 
             }
             else {
