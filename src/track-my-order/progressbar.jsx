@@ -21,7 +21,7 @@ function Progressbar1({orderStatus}) {
 
     }
 
-  },[])
+  },[orderStatus])
   
   return (
     <div className="main-pb">

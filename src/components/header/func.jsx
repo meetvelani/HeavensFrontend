@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { FaTimes, FaUserAlt } from "react-icons/fa";
-import Button from "react-bootstrap/Button";
-import Tooltip from 'react-bootstrap/Tooltip';
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
+// import Button from "react-bootstrap/Button";
+// import Tooltip from 'react-bootstrap/Tooltip';
+// import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
 
 // import { GoThreeBars } from "react-icons/go";
 import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
@@ -16,13 +16,14 @@ import SignupFrontEnd from "../signup/signup";
 import { useStateValue } from "../../StateProvider";
 
 const Func = () => {
-  const [{ isLogin, user }, dispatch] = useStateValue();
+  const [{ isLogin, user }] = useStateValue();
 
   const [toggelState, updatedToggelState] = useState(false);
   const [toggelSearchMobile, updatedSearchMobile] = useState(true);
 
   const onClickSearchIconMobile = () => {
     console.log(toggelSearchMobile);
+    console.log(updatedToggelState);
     updatedSearchMobile(!toggelSearchMobile);
   };
 
@@ -36,10 +37,10 @@ const Func = () => {
   //   updatedSignup(!toggelSignup);
   // };
 
-  const onClickSearchIcon = () => {
-    console.log("Clicked");
-    updatedToggelState(!toggelState);
-  };
+  // const onClickSearchIcon = () => {
+  //   console.log("Clicked");
+  //   updatedToggelState(!toggelState);
+  // };
 
   // const onClickThreeBar = () => {
   //   console.log(toggelThreeBar);

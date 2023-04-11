@@ -1,5 +1,5 @@
 
-import { React, useState } from "react";
+import { React } from "react";
 function IncDecCounter({quantity,setQuantity}) {
   let incNum = () => {
     if (quantity < 10) {

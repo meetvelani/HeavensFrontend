@@ -11,11 +11,11 @@ import LoginFrontEnd from "../Login/login";
 import SignupFrontEnd from "../signup/signup";
 
 const NavbarBlack = () => {
-  const [{ isLogin, user }, dispatch] = useStateValue();
+  const [{ isLogin, user }] = useStateValue();
 
   const [toggelState, updatedToggelState] = useState(false);
-  const [toggelLogin, updatedLogin] = useState(true);
-  const [toggelSignup, updatedSignup] = useState(true);
+  // const [toggelLogin, updatedLogin] = useState(true);
+  // const [toggelSignup, updatedSignup] = useState(true);
   // const [toggelThreeBar, updatedThreeBar] = useState(true);
   const [toggelSearchMobile, updatedSearchMobile] = useState(true);
 
@@ -24,15 +24,15 @@ const NavbarBlack = () => {
     updatedSearchMobile(!toggelSearchMobile);
   };
 
-  const handleLogin = () => {
-    console.log("LLL Clicked");
-    updatedLogin(!toggelLogin);
-  };
+  // const handleLogin = () => {
+  //   console.log("LLL Clicked");
+  //   updatedLogin(!toggelLogin);
+  // };
 
-  const handleSignup = () => {
-    console.log("SSS Clicked");
-    updatedSignup(!toggelSignup);
-  };
+  // const handleSignup = () => {
+  //   console.log("SSS Clicked");
+  //   updatedSignup(!toggelSignup);
+  // };
 
   const onClickSearchIcon = () => {
     console.log("Clicked");

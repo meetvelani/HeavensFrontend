@@ -2,18 +2,18 @@ import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { Link } from "react-router-dom";
-import Cake1 from "../assets/images/card1.png";
-import Cake2 from "../assets/images/card2.png";
-import Cake3 from "../assets/images/card3.png";
-import Cake4 from "../assets/images/card4.png";
+// import Cake1 from "../assets/images/card1.png";
+// import Cake2 from "../assets/images/card2.png";
+// import Cake3 from "../assets/images/card3.png";
+// import Cake4 from "../assets/images/card4.png";
 import { AiFillStar } from "react-icons/ai";
 import "./product-info.scss";
-import ResponsiveCart from "./slider-you-may-also-like";
+// import ResponsiveCart from "./slider-you-may-also-like";
 import IncDecCounter from "./inc-dec";
 import CartIncDecCounter from "./cartProductIncDec";
 // import { useParams } from "react-router-dom";
 import { useLocation } from 'react-router-dom';
-import { addToCart, createOrder, getCart, getProductById } from "../apiCalls";
+import { addToCart, getCart, getProductById } from "../apiCalls";
 import { toast } from "react-toastify";
 import { useStateValue } from "../StateProvider";
 import { domainName } from "../constants";
@@ -21,7 +21,7 @@ import { domainName } from "../constants";
 
 
 function OffCanvasExample({ name, product, quantity, setQuantity, ...props }) {
-  const [{ isLogin }, dispatch] = useStateValue();
+  const [{ isLogin }] = useStateValue();
 
   const [show, setShow] = useState(false);
   const [cartDetail, setCartDetail] = useState([]);
@@ -136,7 +136,7 @@ function ProductInfo() {
   const [quantity, setQuantity] = useState(1);
 
   const [product, setProduct] = useState("");
-  const [error, setError] = useState(null);
+  // const [error, setError] = useState(null);
 
   useEffect(() => {
 
@@ -153,7 +153,7 @@ function ProductInfo() {
         const data = JSON.parse(Re.Value)
         console.log(data)
         setProduct(data[0]);
-        console.log(product.length)
+        // console.log(product.length)
       }
       else {
         toast.error(reMessage)
@@ -165,7 +165,7 @@ function ProductInfo() {
       })
     };
     fetchProduct(id);
-  }, [id]);
+  }, [id,dispatch]);
 
 
   return (

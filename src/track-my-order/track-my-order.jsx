@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 // import NavbarBlack from "../components/header/navbar-black";
 import "./track-my-order.scss";
-import Map1 from "../assets/images/map.png";
+// import Map1 from "../assets/images/map.png";
 // import { ProgressBar } from "react-bootstrap";
 import Progressbar1 from "./progressbar";
 import { useParams } from "react-router-dom";
-import { getOrder, getOrderById } from "../apiCalls";
+import {  getOrderById } from "../apiCalls";
 import { toast } from "react-toastify";
 // import Footer from "../components/footer/footer"
 // import PropTypes from 'prop-types'
@@ -39,7 +39,7 @@ function TrackMyOrder(props) {
     fetchData();
 
 
-  }, [])
+  }, [id])
   return (
     <>
       {/* <NavbarBlack /> */}

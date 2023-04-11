@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import "./signup.scss";
@@ -46,7 +46,7 @@ function SignupFrontEnd() {
     }
   };
 
-  const [show, setShow] = useState(signupModalShow);
+  // const [show, setShow] = useState(signupModalShow);
 
   const handleClose = () => {
     dispatch({

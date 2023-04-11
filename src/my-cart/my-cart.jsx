@@ -1,11 +1,11 @@
 // import PropTypes from "prop-types";
 import "./my-cart.scss";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import React, { useEffect, useRef, useState } from "react";
 // import { AiFillStar } from "react-icons/ai";
-import Cake1 from "../assets/images/card1.png";
-import IncDecCounter from "../product-info/inc-dec";
-import { getCart, getCouponDetail, verifyCouponCode, verifyToken } from "../apiCalls";
+// import Cake1 from "../assets/images/card1.png";
+// import IncDecCounter from "../product-info/inc-dec";
+import { getCart, getCouponDetail, verifyToken } from "../apiCalls";
 import { useStateValue } from "../StateProvider";
 import { toast } from "react-toastify";
 import CartIncDecCounter from "./cartProductIncDec";
@@ -14,7 +14,7 @@ import { domainName } from "../constants";
 // import Footer from "../components/footer/footer";
 
 function MyCart({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, cartTotal, setCartTotal, setCartSubTotal, cartSubTotal, discountAmount, setDiscountAmount }) {
-  const [{ isLogin }, dispatch] = useStateValue();
+  const [, dispatch] = useStateValue();
 
   const [couponCodeStatus, SetCouponCodeStatus] = useState("")
   const token = sessionStorage.getItem("token") || ""
@@ -99,7 +99,7 @@ function MyCart({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, 
     }
     fetchData();
 
-  }, [dispatch, token, orderData]);
+  }, [dispatch, token, orderData,setCartDetail,setCartSubTotal,setCartTotal]);
 
   return (
     <div>

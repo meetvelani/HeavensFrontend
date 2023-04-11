@@ -19,7 +19,7 @@ import Slider from "react-slick";
 import Responsive from "./slider";
 import WhiteArr_right from "../assets/images/white-arrow-right.png";
 import WhiteArr_left from "../assets/images/white-arrow-left.png"
-import { useStateValue } from "../StateProvider";
+// import { useStateValue } from "../StateProvider";
 
 function NextArrow(props) {
   const { onClick } = props;
@@ -43,7 +43,7 @@ function PrevArrow(props) {
 }
 
 function Home() {
-  const [{ loginModalShow }, dispatch] = useStateValue();
+  // const [{ loginModalShow }, dispatch] = useStateValue();
 
   const settings = {
     dots: false,

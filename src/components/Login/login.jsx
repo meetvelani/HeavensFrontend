@@ -1,11 +1,11 @@
 import "./login.scss";
-import React, { useState } from "react";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { Login } from "../../apiCalls";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import { AiOutlineMail } from "react-icons/ai";
-import { FcGoogle } from "react-icons/fc";
+// import { AiOutlineMail } from "react-icons/ai";
+// import { FcGoogle } from "react-icons/fc";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { useStateValue } from "../../StateProvider";
@@ -53,7 +53,7 @@ function LoginFrontEnd() {
     // } 
   };
 
-  const [show, setShow] = useState(loginModalShow);
+  // const [show, setShow] = useState(loginModalShow);
   const handleClose = () => {
     dispatch({
       type: "SET_LOGIN_MODAL",

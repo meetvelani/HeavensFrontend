@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import "./add-address.scss";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { Country, State, City } from 'country-state-city';
 import { addAddress } from "../apiCalls";
 import { toast } from "react-toastify";
@@ -13,7 +13,7 @@ function AddAddress() {
   const [, dispatch] = useStateValue();
 
   const [selectedCountryCode, setSelectedCountryCode] = useState();
-  const [selectedStateCode, setSelectedStateCode] = useState();
+  // const [selectedStateCode, setSelectedStateCode] = useState();
   const [selectedCity, setSelectedCity] = useState();
   const [countries, setCountries] = useState([]);
   const [cities, setCities] = useState([]);

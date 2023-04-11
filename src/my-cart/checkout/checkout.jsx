@@ -1,19 +1,19 @@
 // import PropTypes from 'prop-types'
 import React, { useEffect, useState } from "react";
-import { FcGoogle } from "react-icons/fc";
+// import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import "./checkout.scss";
-import Cake1 from "../../assets/images/card1.png";
+// import Cake1 from "../../assets/images/card1.png";
 // import NavbarBlack from "../components/header/navbar-black";
 // import Footer from "../components/footer/footer";
-import IncDecCounter from "../../product-info/inc-dec";
+// import IncDecCounter from "../../product-info/inc-dec";
 // import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import GreeTick from "../../assets/images/green-tick.png";
 import { domainName } from "../../constants";
 import CartIncDecCounter from "../cartProductIncDec";
 import { createOrder, getAddress } from "../../apiCalls";
-import { Container } from "react-bootstrap";
+// import { Container } from "react-bootstrap";
 import { toast } from "react-toastify";
 
 function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, cartTotal, setCartTotal, setCartSubTotal, cartSubTotal, discountAmount }) {
@@ -24,7 +24,7 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
   const [selectedAddressId, setSelectedAddressId] = useState("")
 
   const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
+  // const handleShow = () => setShow(true);
 
   const selectAddress = (address)=>{
     setSelectedAddressId(address.pk)

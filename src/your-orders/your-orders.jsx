@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./your-order.scss";
-import Cake1 from "../assets/images/card1.png";
-import IncDecCounter from "../product-info/inc-dec";
-import DateTime from "../components/date-time";
+// import Cake1 from "../assets/images/card1.png";
+// import IncDecCounter from "../product-info/inc-dec";
+// import DateTime from "../components/date-time";
 import { Link } from "react-router-dom";
 import { getOrder } from "../apiCalls";
 import { toast } from "react-toastify";

@@ -5,7 +5,7 @@ import ScrollToTop from "./components/scroll";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Home from "./home/home";
-import MyCart from "./my-cart/my-cart";
+// import MyCart from "./my-cart/my-cart";
 // import Checkout from "./checkout/checkout";
 import TrackMyOrder from "./track-my-order/track-my-order";
 import NavbarBlack from "./components/header/navbar-black";
@@ -23,7 +23,7 @@ import Help from "./help/help";
 import NoPage from "./components/no-page";
 import Loader from "./components/Loader/Loader";
 import { useStateValue } from "./StateProvider";
-import { getSpecialCake, verifyToken } from "./apiCalls";
+import {  verifyToken } from "./apiCalls";
 import jwt_decode from "jwt-decode";
 import ProductInfo from "./product-info/product-info";
 import PlaceOrder from "./my-cart/place-order";
@@ -62,7 +62,7 @@ function App() {
     }
     fetchData();
 
-  }, [])
+  }, [dispatch])
   return (
     <div className="App">
 

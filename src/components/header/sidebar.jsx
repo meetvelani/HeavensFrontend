@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { AiOutlineBars } from "react-icons/ai";
 // import { Login } from "../../apiCalls";
-import LoginFrontEnd from "../Login/login";
-import SignupFrontEnd from "../signup/signup";
+// import LoginFrontEnd from "../Login/login";
+// import SignupFrontEnd from "../signup/signup";
 import { useStateValue } from "../../StateProvider";
 import { FaUserAlt } from "react-icons/fa";
 
