@@ -1,0 +1,88 @@
+.container-update-address {
+    padding: 10%;
+    .heading {
+        h1 {
+            // padding-top: 110px;
+            text-align: left;
+            text-transform: capitalize;
+            font-family: "Poppins";
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 60px;
+            letter-spacing: 0px;
+            margin-bottom: 16px;
+            // text-align: center;
+        }
+        .line-yellow {
+            color: rgba(201, 167, 77, 1);
+            width: 107px;
+            margin-bottom: 24px;
+        }
+    }
+    .form-add-address {
+        .ui-form-ad {
+            text-align: left;
+            width: 300px;
+            p {
+                color: red;
+            }
+            .each-form-field {
+                margin-top: 16px;
+                label {
+                    display: block;
+                    font-family: "Poppins";
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    letter-spacing: -0.25px;
+                    text-align: left;
+                    margin-bottom: 4px;
+                }
+                select {
+                    width: 300px;
+                    background-color: rgba(246, 247, 249, 1);
+                    height: 48px;
+                    border-radius: 4px;
+                    border: none;
+                    padding: 12px 16px 12px 16px;
+                    margin-bottom: 16px;
+                    color: rgba(131, 135, 153, 1);
+                    font-family: 'Poppins';
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.25px;
+                    text-align: left;
+                }
+                input {
+                    width: 300px;
+                    color: rgba(131, 135, 153, 1);
+                    background: rgba(246, 247, 249, 1);
+                    height: 48px;
+                    border-radius: 4px;
+                    border: none;
+                    padding: 12px 16px 12px 16px;
+                    font-family: 'Poppins';
+                    font-size: 16px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    letter-spacing: -0.25px;
+                    text-align: left;
+                }
+            }
+            .save-address {
+                height: 40px;
+                width: 173px;
+                left: 0px;
+                top: 660px;
+                border-radius: 4px;
+                padding: 8px 24px 8px 24px;
+                color: white;
+                background-color: black;
+                text-align: center;
+                margin-top: 16px;
+                margin-bottom: 24px;
+            }
+        }
+    }
+}

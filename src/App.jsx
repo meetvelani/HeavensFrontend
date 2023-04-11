@@ -27,6 +27,7 @@ import {  verifyToken } from "./apiCalls";
 import jwt_decode from "jwt-decode";
 import ProductInfo from "./product-info/product-info";
 import PlaceOrder from "./my-cart/place-order";
+import UpdateAddress from "./update-address/update-address";
 
 
 function App() {
@@ -78,6 +79,18 @@ function App() {
               <>
                 <NavbarBlack />
                 <AddAddress />
+                {/* <ChartBe/> */}
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/update-address/:id"
+            element={
+              <>
+                <NavbarBlack />
+                {/* <Update /> */}
+                <UpdateAddress />
                 {/* <ChartBe/> */}
                 <Footer />
               </>

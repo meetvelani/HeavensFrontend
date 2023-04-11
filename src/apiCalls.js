@@ -59,6 +59,26 @@ export async function addAddress(addressDetail) {
     }).then((data) => data.json());
     return data;
 }
+
+export async function getAddress(token) {
+    const data = await fetch(`${domainName}${api.getAddress}?token=${token}`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }).then((data) => data.json());
+    return data;
+}
+export async function getAddressById(token,id) {
+    const data = await fetch(`${domainName}${api.getAddress}?token=${token}&id=${id}`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }).then((data) => data.json());
+    return data;
+}
+
 export async function deleteDeliveryAddress(id,token) {
 
     const data = await fetch(`${domainName}${api.deleteDeliveryAddress}?id=${id}&token=${token}`, {
@@ -67,6 +87,19 @@ export async function deleteDeliveryAddress(id,token) {
             "Content-Type": "application/json",
         },
         body: JSON.stringify(),
+    }).then((data) => data.json());
+    return data;
+}
+
+
+export async function updateDeliveryAddress(address) {
+
+    const data = await fetch(`${domainName}${api.updateDeliveryAddress}`, {
+        method: "PATCH",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(address),
     }).then((data) => data.json());
     return data;
 }
@@ -102,15 +135,7 @@ export async function getOrderById(token,id) {
     }).then((data) => data.json());
     return data;
 }
-export async function getAddress(token) {
-    const data = await fetch(`${domainName}${api.getAddress}?token=${token}`, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json",
-        },
-    }).then((data) => data.json());
-    return data;
-}
+
 export async function getCart(token) {
     const data = await fetch(`${domainName}${api.getCart}?token=${token}`, {
         method: "GET",
@@ -151,6 +176,7 @@ export async function updateCart(cartData) {
     }).then((data) => data.json());
     return data;
 }
+
 export async function createOrder(userData) {
 
     const data = await fetch(`${domainName}${api.createOrder}`, {

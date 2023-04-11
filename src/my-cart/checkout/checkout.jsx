@@ -90,6 +90,15 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
       // console.log(reMessage)
     }
   }
+  // const editAddress = ()=>{
+  //   if (selectedAddressId === "") {
+  //     toast.warning("Please Select Address.")
+  //   }
+  //   else {
+  //     navigate("/update-address/"+selectedAddressId)
+  //   }
+
+  // }
 
   const setPaymentMethod = (type) => {
     orderData.paymentMethod = type
@@ -148,6 +157,7 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
               <div className="row-col-3">
                 <div className="btn-col-3-r col">
                   <button className="next-btn2 btn btn-dark">Edit</button>
+                  {/* <button className="next-btn2 btn btn-dark" onClick={() => editAddress()}>Edit</button> */}
                 </div>
                 <div className="btn-col-3-r col">
                   <button className="next-btn3 btn btn-dark" onClick={() => deleteAddress()}>Delete</button>
