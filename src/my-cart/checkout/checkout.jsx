@@ -1,7 +1,7 @@
 // import PropTypes from 'prop-types'
 import React, { useEffect, useState } from "react";
 // import { FcGoogle } from "react-icons/fc";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./checkout.scss";
 // import Cake1 from "../../assets/images/card1.png";
 // import NavbarBlack from "../components/header/navbar-black";
@@ -15,6 +15,7 @@ import CartIncDecCounter from "../cartProductIncDec";
 import { createOrder, getAddress } from "../../apiCalls";
 // import { Container } from "react-bootstrap";
 import { toast } from "react-toastify";
+// import { displayRazorpay } from "../Razorpay";
 
 function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, cartTotal, setCartTotal, setCartSubTotal, cartSubTotal, discountAmount }) {
   // static propTypes = {};
@@ -22,6 +23,7 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
   const [PaymentType, setPaymentType] = useState("")
   const [deliveryAddress, setDeliveryAddress] = useState([])
   const [selectedAddressId, setSelectedAddressId] = useState("")
+  const navigate = useNavigate()
 
   const handleClose = () => setShow(false);
   // const handleShow = () => setShow(true);
@@ -44,12 +46,13 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
     else if(PaymentType===""){
       toast.warning("Please Select Payment Method.")
     }
-    else{
+    else {
       orderData.token = sessionStorage.getItem("token") ||""
       const re= await createOrder(orderData)
       const reMessage = re.status[0].Message
       if(reMessage === "Successfully Order Created."){
         toast.success(reMessage)
+        navigate("/your-orders")
 
       }
       else{
@@ -58,8 +61,12 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
       console.log(re)
 
     }
+    // else{
+    //   displayRazorpay(orderData)
+    // }
     console.log(orderData)
   }
+  
 
   const setPaymentMethod = (type) => {
     orderData.paymentMethod = type
