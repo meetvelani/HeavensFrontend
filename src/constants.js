@@ -16,5 +16,7 @@ export const api = {
     getAddress: "/api/get-delivery-address",
     createOrder: "/api/create-order",
     getOrder: "/api/get-orders",
+    createPaymentOrder: "/api/payment",
+    getAllProduct: "/api/products",
 
 }

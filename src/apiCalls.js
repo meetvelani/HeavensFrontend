@@ -151,3 +151,26 @@ export async function createOrder(userData) {
     }).then((data) => data.json());
     return data;
 }
+
+export async function createPaymentOrder(token, amount) {
+    return fetch(`${domainName}${api.createPaymentOrder}?token=${token}&amount=${amount}`, {
+      method: 'get',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify()
+    })
+      .then(data => data.json())
+    }
+
+export async function getAllProduct() {
+    return fetch(`${domainName}${api.getAllProduct}`, {
+      method: 'get',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify()
+    })
+      .then(data => data.json())
+    }
+

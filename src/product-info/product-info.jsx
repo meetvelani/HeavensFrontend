@@ -237,7 +237,7 @@ function ProductInfo() {
                     <p className="id-name">Id. {product.pk}</p>
                     <p className="text-warning starts-cake-des">
                       {
-                        Array.from(Array(5)).map(rating => <AiFillStar />)
+                        Array.from(Array(product.fields.rating)).map(rating => <AiFillStar />)
                       }
 
                     </p>
