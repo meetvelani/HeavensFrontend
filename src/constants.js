@@ -2,6 +2,8 @@
 export const domainName = "https://heavens-0frh.onrender.com"
 
 
+
+
 export const api = {
     login: "/api/login",
     register: "/api/register",
@@ -18,5 +20,6 @@ export const api = {
     getOrder: "/api/get-orders",
     createPaymentOrder: "/api/payment",
     getAllProduct: "/api/products",
+    deleteDeliveryAddress: "/api/delete-delivery-address",
 
 }

@@ -49,7 +49,7 @@ function OffCanvasExample({ name, ...props }) {
                 <li onClick={handleShow}><Link to="/" >home</Link></li>
                 <li onClick={handleShow}><a href="/#about-section">about</a></li>
                 <li onClick={handleShow}><Link to="/shop">Shop</Link></li>
-                <li onClick={handleShow}><Link to="/no-page">make your own cake</Link></li>
+                <li onClick={handleShow}><Link to="/your-orders">Orders</Link></li>
                 <li onClick={handleShow}><Link to="/help">Help</Link></li>
               </ul>
               {isLogin ? <div className="user-credentials" >

@@ -59,6 +59,17 @@ export async function addAddress(addressDetail) {
     }).then((data) => data.json());
     return data;
 }
+export async function deleteDeliveryAddress(id,token) {
+
+    const data = await fetch(`${domainName}${api.deleteDeliveryAddress}?id=${id}&token=${token}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(),
+    }).then((data) => data.json());
+    return data;
+}
 // 
 
 

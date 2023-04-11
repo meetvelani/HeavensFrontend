@@ -12,7 +12,7 @@ import Modal from "react-bootstrap/Modal";
 import GreeTick from "../../assets/images/green-tick.png";
 import { domainName } from "../../constants";
 import CartIncDecCounter from "../cartProductIncDec";
-import { createOrder, getAddress } from "../../apiCalls";
+import { createOrder, deleteDeliveryAddress, getAddress } from "../../apiCalls";
 // import { Container } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { displayRazorpay } from "../Razorpay";
@@ -28,7 +28,7 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
   const handleClose = () => setShow(false);
   // const handleShow = () => setShow(true);
 
-  const selectAddress = (address)=>{
+  const selectAddress = (address) => {
     setSelectedAddressId(address.pk)
     orderData.addressId = address.pk
     orderData.city = address.fields.city
@@ -36,38 +36,60 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
     orderData.country = address.fields.country
     orderData.zipCode = address.fields.pin_code
     orderData.phoneNumber = address.fields.phone_number
-    orderData.address = `${address["fields"]["house_number"]}, ${address["fields"]["area"]}, ${address["fields"]["landmark"]}, ${address["fields"]["city"]}, ${address["fields"]["state"]}, ${address["fields"]["pin_code"]}.` 
+    orderData.address = `${address["fields"]["house_number"]}, ${address["fields"]["area"]}, ${address["fields"]["landmark"]}, ${address["fields"]["city"]}, ${address["fields"]["state"]}, ${address["fields"]["pin_code"]}.`
     orderData.name = address.fields.fullname
   }
-  const handleSubmit = async()=>{
-    if(selectedAddressId===""){
+  const handleSubmit = async () => {
+    if (selectedAddressId === "") {
       toast.warning("Please Select address.")
     }
-    else if(PaymentType===""){
+    else if (PaymentType === "") {
       toast.warning("Please Select Payment Method.")
     }
-    else if( PaymentType ==="COD") {
-      orderData.token = sessionStorage.getItem("token") ||""
-      const re= await createOrder(orderData)
+    else if (PaymentType === "COD") {
+      orderData.token = sessionStorage.getItem("token") || ""
+      const re = await createOrder(orderData)
       const reMessage = re.status[0].Message
-      if(reMessage === "Successfully Order Created."){
+      if (reMessage === "Successfully Order Created.") {
         toast.success(reMessage)
         navigate("/your-orders")
 
       }
-      else{
+      else {
         toast.error(reMessage)
       }
       console.log(re)
 
     }
-    else{
-      orderData.token = sessionStorage.getItem("token") ||""
+    else {
+      orderData.token = sessionStorage.getItem("token") || ""
       displayRazorpay(orderData)
     }
     console.log(orderData)
   }
-  
+
+  const deleteAddress = async () => {
+    if (selectedAddressId === "") {
+      toast.warning("Please Select Address.")
+    }
+    else {
+      const token = sessionStorage.getItem("token") || ""
+      const re = await deleteDeliveryAddress(selectedAddressId, token)
+      const reMessage = re.status[0].Message
+      if (reMessage !== "Successfully Address Deleted.") {
+        toast.error(reMessage)
+      }
+      else {
+        const addressRe = await getAddress(token)
+        const reMessage = addressRe.status[0].ResponseMessage
+        if (reMessage === "Successfully Address fetch.") {
+          const address = JSON.parse(addressRe.Value)
+          setDeliveryAddress(address)
+        }
+      }
+      // console.log(reMessage)
+    }
+  }
 
   const setPaymentMethod = (type) => {
     orderData.paymentMethod = type
@@ -107,7 +129,7 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
             <div className="content-1">
               <h5>Select Delivery address</h5>
               {deliveryAddress.map(address =>
-                <div className={address.pk===selectedAddressId?"address-Container selected-address":"address-Container"} id={address.pk} onClick={()=>selectAddress(address)}>
+                <div className={address.pk === selectedAddressId ? "address-Container selected-address" : "address-Container"} id={address.pk} onClick={() => selectAddress(address)}>
                   <p className="name">{address.fields.fullname}</p>
                   <p className="address" >{address["fields"]["house_number"]}, {address["fields"]["area"]}, {address["fields"]["landmark"]}, {address["fields"]["city"]}, {address["fields"]["state"]}, {address["fields"]["pin_code"]}. </p>
 
@@ -128,7 +150,7 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
                   <button className="next-btn2 btn btn-dark">Edit</button>
                 </div>
                 <div className="btn-col-3-r col">
-                  <button className="next-btn3 btn btn-dark">Delete</button>
+                  <button className="next-btn3 btn btn-dark" onClick={() => deleteAddress()}>Delete</button>
                 </div>
               </div>
             </div>
