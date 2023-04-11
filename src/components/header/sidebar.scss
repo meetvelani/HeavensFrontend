@@ -1,0 +1,96 @@
+.offcanvas-be {
+    .offcanvas {
+        width: 80% !important;
+    }
+}
+
+.general-mobile-view {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    letter-spacing: 0px;
+    text-align: left !important;
+    text-transform: capitalize;
+
+    ul {
+        float: left;
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        align-content: flex-start;
+        justify-items: left;
+        padding-left: 0px;
+
+        li {
+            text-align: left;
+            padding: 16px;
+
+            a {
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+
+    .login-signup-mobile {
+        margin-top: 10px;
+        padding-top: 40px;
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 18px;
+        letter-spacing: 0px;
+        font-family: "Poppins", sans-serif;
+
+        .signup-button {
+            background-color: black;
+            color: rgb(252, 250, 250);
+            border: 2px solid black;
+            border-radius: 4px;
+            padding: 6px 24px 6px 24px;
+            font-size: 16px;
+            font-family: "Poppins", sans-serif;
+            margin-left: 8px;
+        }
+
+        .login-button {
+            background-color: transparent;
+            color: black;
+            font-size: 16px;
+            font-family: "Poppins", sans-serif;
+            border: 1px solid rgba(128, 128, 128, 0.1);
+            border-radius: 4px;
+            padding: 6px 24px 6px 24px;
+            margin-left: 20px;
+        }
+
+    }
+
+    .user-credentials {
+        padding-left: 16px;
+
+        .user {
+            background: transparent;
+            color: black;
+            border: none;
+        }
+
+        .username {
+            cursor: pointer;
+            padding-left: 8px;
+            border: none;
+            background: transparent;
+
+            a {
+                color: black;
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+    }
+
+}

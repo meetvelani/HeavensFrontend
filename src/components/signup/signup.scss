@@ -1,0 +1,188 @@
+.signup-button {
+    background-color: black;
+    color: rgb(252, 250, 250);
+    border: 2px solid black;
+    border-radius: 10px;
+    height: 32px;
+    width: 100px;
+    font-size: 14px;
+    font-family: "Poppins", sans-serif;
+    padding: 2px;
+    // margin-left: 30px;
+}
+
+.modal-content {
+    // height: 554px;
+    height: auto;
+    width: 354px;
+    border-radius: 4px;
+    z-index: 100;
+}
+
+.modal-header {
+    //styleName: Medium : 24px | Line height : 32px;
+    font-family: "Poppins";
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+.modal-body {
+    .hc {
+        margin-left: 10px;
+        font-family: "Poppins";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: -0.25px;
+        text-align: left;
+        display: block;
+        margin-top: 16px;
+    }
+    .input-hc {
+        margin-left: 10px;
+        height: 48px;
+        width: 300px;
+        left: 0px;
+        top: 28px;
+        border-radius: 4px;
+        padding: 12px 16px 12px 16px;
+        border-radius: 4px;
+        border: 2px solid #f6f7f9;
+        background-color: #f6f7f9;
+        color: #838799;
+        font-family: Poppins;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.25px;
+        text-align: left;
+        .PhoneInputInput {
+            background-color: #f6f7f9;
+            border: #f6f7f9;
+        }
+    }
+    .btn-hc {
+        margin-left: 10px;
+        margin-top: 16px;
+        width: 80%;
+        height: 48px;
+        width: 300px;
+        left: 42px;
+        top: 198px;
+        border-radius: 4px;
+        padding: 12px 24px 12px 24px;
+        background-color: black;
+        color: white;
+        font-family: "Poppins";
+        font-size: 16px;
+        font-weight: 600;
+        // line-height: 24px;
+        letter-spacing: -0.25px;
+        text-align: center;
+    }
+    .hr-line {
+        margin-top: 33px;
+        height: 0px;
+        width: 130px;
+        left: 0px;
+        top: 9px;
+        background: rgba(214, 214, 214, 1);
+    }
+    .email {
+        height: 48px;
+        width: 300px;
+        margin: auto;
+        border-radius: 4px;
+        margin-top: 24px;
+        border: 1px solid rgba(220, 222, 230, 1);
+        p {
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 24px;
+            letter-spacing: -0.25px;
+            text-align: center;
+            margin-top: 13px !important;
+            margin: auto;
+            .mail {
+                color: rgba(107, 111, 128, 1);
+                height: 20px;
+                width: 20px;
+                padding-right: 3px;
+            }
+        }
+    }
+}
+
+.modal-footer {
+    text-align: center;
+    // margin-top: 24px;
+    margin-bottom: 12px;
+    text-align: center;
+    font-size: 12px;
+    font-family: "Poppins";
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 12px;
+    letter-spacing: 0em;
+    // text-align: right;
+    .bottom-text {
+        text-align: center;
+        color: rgba(126, 126, 126, 1);
+        padding: 0 60px;
+        .signup-modal {
+            color: black;
+            font-weight: bold;
+            text-decoration: none;
+        }
+    }
+}
+
+.toast-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+}
+
+.toast {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    margin: 5px 0;
+    border-radius: 5px;
+    font-size: 16px;
+    line-height: 1.5;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+}
+
+@media (min-width: 768px) {
+    .toast-container {
+        width: auto;
+    }
+    .toast {
+        width: 400px;
+        max-width: none;
+    }
+}
+
+@media (max-width: 767px) {
+    .toast-container {
+        width: 100%;
+        align-items: center;
+        top: auto;
+        bottom: 0;
+    }
+    .toast {
+        width: 90%;
+        max-width: none;
+    }
+}

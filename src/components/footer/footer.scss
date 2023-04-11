@@ -1,0 +1,260 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway);
+.footer .container .qrImg {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 200px;
+    padding-top: 25px;
+    border: 2px solid blue;
+    border-radius: 10px;
+}
+
+.footer {
+    overflow: hidden;
+}
+
+.footer .container .qrImg::before,
+.footer .container .qrImg::after {
+    content: '';
+    position: absolute;
+    background: black;
+}
+
+.footer .container .qrImg::before {
+    width: calc(100% + 50px + 4px - 120px);
+    height: calc(100% + 4px);
+    top: -2px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.footer .container .qrImg::after {
+    height: calc(100% + 50px + 4px - 120px);
+    width: calc(100% + 4px);
+    left: -2px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.footer {
+    background-color: black;
+}
+
+.footer .container {
+    width: 100%;
+    height: fit-content;
+    background-color: black;
+    flex-direction: column;
+    align-items: flex-start;
+    grid-template-columns: auto auto auto;
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+.footer .container {
+    max-width: none;
+    padding: 0;
+    .col {
+        display: flex;
+        width: 100%;
+        .wrp {
+            display: flex;
+            gap: 20px;
+        }
+    }
+}
+
+.footer .container div {
+    color: aliceblue;
+    text-align: center;
+    margin: auto;
+    padding: 20px;
+    justify-content: space-between;
+}
+
+.footer .qrCode {
+    padding: 50px;
+}
+
+.socialMediaText {
+    color: gray;
+}
+
+.socialMediaText2 {
+    color: gray;
+}
+
+.footer .container .qrImgSec {
+    width: 110px;
+    height: 110px;
+    margin-top: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+    z-index: 5;
+    position: relative;
+}
+
+.downloadApp h2 {
+    text-align: left;
+    padding-left: 20px;
+}
+
+.downloadApp .app img {
+    width: auto;
+    height: auto;
+    float: left;
+}
+
+.downloadApp div {
+    margin-top: 7px;
+    float: left;
+}
+
+.playStore {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.socialMedia {
+    h2 {
+        text-align: left !important;
+    }
+    .socialMediaText {
+        font-size: small;
+        font-weight: lighter;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: left;
+        margin-left: -20px;
+    }
+    img {
+        display: block;
+    }
+    .socialMediaText2 {
+        font-size: small;
+        font-weight: lighter;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        text-align: left;
+        margin-left: -173px;
+    }
+}
+
+.footText {
+    color: beige;
+    font-size: 12px;
+    font-weight: lighter;
+    text-align: left !important;
+    letter-spacing: 1.1px;
+}
+
+.footRightText {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: right;
+    color: beige;
+    letter-spacing: 1.3px;
+}
+
+.footerTextBottom {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.smIcon {
+    /* display: flex;
+    float: left; */
+    margin-right: 40px;
+}
+
+.socialMedia h2 {
+    text-align: left;
+}
+
+
+/* .smIconDiv {
+    display: flex;
+    float: left;
+} */
+
+@media only screen and (max-width: 600px) {
+    .footer .container {
+        width: 100%;
+        height: fit-content;
+        background-color: black;
+        align-items: flex-start;
+        grid-template-columns: auto auto auto;
+        margin-left: 0px;
+        padding-left: 0px;
+    }
+    .footer .container .col {
+        display: flex;
+        flex-direction: column-reverse;
+        .wrp {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+    .socialMedia {
+        .socialMediaText {
+            text-align: left !important;
+        }
+        .socialMediaText2 {
+            margin-left: 0px;
+        }
+        img {
+            padding: 10px;
+        }
+    }
+    .downloadApp {
+        width: 100%;
+        height: 350px;
+        margin-left: -50px !important;
+    }
+    .smIcon {
+        /* display: flex;
+        float: left; */
+        margin-right: 25px;
+    }
+    .smIconDiv {
+        margin-top: 20px !important;
+        .smIcon {
+            margin-left: 10px;
+        }
+    }
+    #linkedIn {
+        margin-left: -40px;
+    }
+    .socialMediaText {
+        color: gray;
+    }
+    .socialMediaText2 {
+        color: gray;
+    }
+    .socialMedia h2 {
+        font-size: 30px;
+        text-align: center;
+    }
+    .downloadApp h2 {
+        font-size: 28px;
+    }
+    .downloadApp .app img {
+        width: 280px;
+        height: auto;
+        float: right;
+    }
+    .footer .container .col {
+        flex-wrap: wrap;
+        overflow: hidden;
+        margin-left: -10px;
+    }
+    .footerTextBottom {
+        margin-top: 50px;
+        span {
+            display: block;
+            width: fit-content;
+        }
+    }
+}

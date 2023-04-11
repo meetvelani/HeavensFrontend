@@ -1,0 +1,88 @@
+.add-to-cart-root {
+    .content {
+        text-align: left;
+        color: rgb(44, 44, 44);
+        margin-top: 12px;
+        h3 {
+            //styleName: Medium : 16px | Line height : 24px;
+            //styleName: Medium : 16px | Line height : 24px;
+            margin-bottom: 0px;
+            font-family: "Poppins";
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+        .badge {
+            // height: 18px;
+            // width: 95px;
+            left: 6.35205078125px;
+            top: 1.587890625px;
+            border-radius: 0;
+            width: auto;
+            padding-left: 2px;
+            padding-right: 2px;
+            height: 18px;
+            /* Regular : 12px | Line height : 18px */
+            font-family: "Poppins", sans-serif;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            /* identical to box height, or 150% */
+            text-align: center;
+            color: #8a8e9b !important;
+            // background-color: rgba(138, 142, 155, 1) !important;
+            padding: 0px;
+            margin: auto;
+            text-align: center;
+        }
+    }
+    .slick-slider {
+        .slick-next {
+            float: right;
+            // margin-top: -35%;
+            position: absolute;
+            top: 50%;
+            right: -2%;
+            transform: translateY(-100px);
+        }
+        .slick-prev {
+            float: left;
+            position: absolute;
+            top: 50%;
+            left: -2%;
+            transform: translateY(-100px);
+        }
+        .slick-next::before {
+            opacity: 0;
+        }
+        .slick-prev::before {
+            opacity: 0;
+        }
+        .slick-list {
+            .slick-track {
+                .slick-slide {
+                    img {
+                        margin: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// *************************************
+@media screen and (max-width: 700px) {
+    .add-to-cart-root {
+        .slick-next {
+            right: -10% !important;
+            transform: translateY(-100px) !important;
+        }
+        .slick-prev {
+            left: -10% !important;
+            transform: translateY(-100px) !important;
+        }
+    }
+}

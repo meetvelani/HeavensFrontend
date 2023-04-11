@@ -1,0 +1,165 @@
+.your-orders {
+    padding: 110px;
+    .heading-ofy {
+        .shop-heading {
+            // padding-left: 25px;
+            font-family: "Poppins";
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 60px;
+            letter-spacing: 0px;
+            text-align: left;
+            // margin-bottom: 0;
+        }
+        .line-yellow {
+            color: rgba(201, 167, 77, 1);
+            width: 107px;
+            // margin-left: 25px;
+            border: 1px solid rgba(201, 167, 77, 1);
+        }
+        .content {
+            border: 1px solid rgba(128, 128, 128, 0.205);
+            border-radius: 4px;
+            // width: 50%;
+            width: 600px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: row;
+            .content-1 {
+                .delivery-date {
+                    font-family: "Raleway";
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 24px;
+                    letter-spacing: 0px;
+                    text-align: left;
+                }
+                .cake-content {
+                    display: flex;
+                    flex-direction: row;
+                    // width: 40%;
+                    padding: 20px;
+                    .col-cake2 {
+                        width: 100px; // margin: auto;
+                        img {
+                            width: 100px;
+                            height: 100px;
+                            margin: auto;
+                        }
+                    }
+                    .col-cake3 {
+                        padding-left: 12px;
+                        .button-tyo-mobile {
+                            display: none;
+                        }
+                        h3 {
+                            //styleName: Medium : 16px | Line height : 24px;
+                            //styleName: Medium : 16px | Line height : 24px;
+                            // font-family: Poppins;
+                            font-size: 16px;
+                            font-weight: 500;
+                            line-height: 24px;
+                            letter-spacing: 0px;
+                            text-align: left;
+                            margin-bottom: 0;
+                            margin-top: 0;
+                        }
+                        .input-group {
+                            margin-top: 6px;
+                            position: static;
+                            flex-wrap: nowrap;
+                            align-items: normal;
+                            width: 100px;
+                            border: 1px solid rgba(128, 128, 128, 0.5);
+                            .btn {
+                                border: none;
+                            }
+                            .btn:hover {
+                                border: 1px solid rgba(128, 128, 128, 0.5);
+                                border-radius: 0px;
+                                background-color: rgba(128, 128, 128, 0.5);
+                            }
+                            input {
+                                border: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .track-order{
+                display: flex;
+                justify-content: flex-end;
+                flex-direction: column;
+            }
+            .button-tyo {
+                height: 56px;
+                width: 178px;
+                left: 332px;
+                top: 100px;
+                border-radius: 4px;
+                padding: 16px 24px 16px 24px;
+                // margin-top: 75px;
+                // margin-left: 126px;
+                font-family: "Poppins";
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: -0.25px;
+                text-align: center;
+                // position: relative;
+                a {
+                    text-decoration: none;
+                    color: white;
+                }
+            }
+        }
+    }
+}
+
+// ****************************************************
+@media screen and (max-width: 800px) {
+    .your-orders {
+        padding: 16px;
+        padding-top: 60px;
+        .heading-ofy {
+            .content {
+                width: auto;
+                .button-tyo-mobile {
+                    display: none;
+                }
+                .button-tyo {
+                    margin-left: auto;
+                    a {
+                        text-decoration: none;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// *******************************************
+@media screen and (max-width: 600px) {
+    .your-orders {
+        .heading-ofy {
+            .content {
+                display: flex;
+                flex-direction: column;
+                .col-cake2 {
+                    img {
+                        // margin-top: 15px !important;
+                    }
+                }
+                
+                .track-order{
+                    display: flex;
+                }
+                // .button-tyo {
+                //     display: none;
+                // }
+            }
+        }
+    }
+}

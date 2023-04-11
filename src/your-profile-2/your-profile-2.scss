@@ -1,0 +1,103 @@
+.main-div-your-profile-2 {
+    padding: 10%;
+    text-align: left;
+    .heading {
+        h1 {
+            font-family: "Poppins";
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 60px;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+    }
+    .line-yellow {
+        margin-top: 16px;
+        width: 107px;
+        color: rgba(201, 167, 77, 1);
+        margin-bottom: 24px;
+    }
+    .delivery-date {
+        font-family: "Raleway";
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 24px;
+        letter-spacing: 0px;
+        text-align: left;
+    }
+    .col-y-p-2 {
+        display: flex;
+        flex-direction: row;
+        .rr1 {
+            display: flex;
+            flex-direction: row;
+            .col-x-p-1 {
+                img {
+                    width: 100px;
+                    height: 100px;
+                }
+            }
+            .col-x-p-2 {
+                padding-left: 12px;
+                h2 {
+                    width: 85px; //styleName: Medium : 16px | Line height : 24px;
+                    font-family: "Poppins";
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0px;
+                    text-align: left;
+                }
+                .input-group {
+                    margin-top: 6px;
+                    position: static;
+                    flex-wrap: nowrap;
+                    align-items: normal;
+                    width: 100px;
+                    border: 1px solid rgba(128, 128, 128, 0.5);
+                    .btn {
+                        border: none;
+                    }
+                    .btn:hover {
+                        border: 1px solid rgba(128, 128, 128, 0.5);
+                        border-radius: 0px;
+                        background-color: rgba(128, 128, 128, 0.5);
+                    }
+                    input {
+                        border: none;
+                    }
+                }
+            }
+        }
+        .btn-track-order {
+            .btn-t-o {
+                height: 56px;
+                width: 180px;
+                left: 332px;
+                top: 100px;
+                border-radius: 4px;
+                padding: 16px 24px 16px 24px;
+                margin-left: 80%;
+                margin-top: 45px;
+                background-color: black;
+                color: white;
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .main-div-your-profile-2 {
+        .col-y-p-2 {
+            display: flex;
+            flex-direction: column;
+            .btn-track-order {
+                margin-left: 0%;
+                .btn-t-o {
+                    margin-left: 0%;
+                }
+            }
+        }
+    }
+}

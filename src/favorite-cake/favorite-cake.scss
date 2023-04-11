@@ -1,0 +1,91 @@
+.ofc-main-div {
+    padding: 5%;
+    .heading-ofy {
+        .shop-heading {
+            padding-left: 25px;
+            font-family: "Poppins";
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 60px;
+            letter-spacing: 0px;
+            text-align: left;
+            margin-bottom: 0;
+        }
+        .bottom-txt {
+            padding-left: 30px;
+            font-family: "Poppins";
+            font-size: 18px;
+            font-weight: 400;
+            // line-height: 60px;
+            letter-spacing: 0px;
+            text-align: left;
+            color: gray;
+        }
+    }
+    .line-yellow {
+        color: rgba(201, 167, 77, 1);
+        width: 107px;
+        margin-left: 25px;
+        border: 1px solid rgba(201, 167, 77, 1);
+    }
+    .container {
+        width: 100%;
+        .row {
+            width: 100%;
+            .card-cake {
+                float: left;
+                margin-top: 24px;
+                .cake-title {
+                    //styleName: Medium : 16px | Line height : 24px;
+                    font-family: "Poppins";
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0px;
+                    text-align: left;
+                    // margin-left: 20px;
+                    margin-bottom: 0px;
+                }
+                .stars-be {
+                    color: rgba(201, 167, 77, 1);
+                    margin-bottom: 0px;
+                    text-align: left;
+                    // margin-left: 20px;
+                }
+                .cake-price {
+                    //styleName: Medium : 16px | Line height : 24px;
+                    font-family: "Poppins";
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 24px;
+                    letter-spacing: 0px;
+                    text-align: left;
+                    // margin-left: 20px;
+                    margin-bottom: 0px;
+                }
+                .badge-p-be {
+                    text-align: left;
+                    // margin-left: 20px;
+                    .badge {
+                        height: 21.176055908203125px;
+                        // width: 107.7042236328125px;
+                        left: 0px;
+                        top: 0px;
+                        border-radius: 3.9700706005096436px;
+                        padding: 2px 6px 2px 6px;
+                        background-color: rgba(246, 246, 246, 1);
+                        font-family: "Poppins";
+                        font-size: 12px;
+                        font-weight: 400;
+                        // line-height: 18px;
+                        letter-spacing: 0px;
+                        text-align: center;
+                        color: rgba(138, 142, 155, 1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// **************************************************************************

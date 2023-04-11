@@ -1,0 +1,608 @@
+.whole-mobile-nav {
+    display: none;
+}
+
+.custom-button {
+    background-color: transparent;
+    border: none;
+    // color: inherit;
+    cursor: pointer;
+    font-size: inherit;
+    padding: 0;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.primary-navbar {
+    width: 100%;
+    height: 71px;
+    display: flex;
+    font-size: 14px;
+    background-color: rgba(255, 255, 255, 1);
+
+    .cross-mobile-navbar {
+        display: none;
+    }
+
+    .signout-button {
+        background-color: black;
+        color: rgb(252, 250, 250);
+        border: 2px solid black;
+        border-radius: 10px;
+        height: 32px;
+        width: 100px;
+        font-size: 14px;
+        font-family: "Poppins", sans-serif;
+        padding: 2px;
+        // margin-left: 30px;
+    }
+
+    .sub-menu {
+        display: flex;
+        width: 70%;
+        color: rgb(3, 3, 3);
+        align-items: center;
+
+        .general-mobile-view {
+            display: none;
+        }
+
+        .general-menu {
+            display: flex;
+            flex-direction: row;
+            width: 85%;
+
+            ul {
+                width: 85%;
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+
+                li a {
+                    text-decoration: none;
+                    color: rgb(255, 255, 255);
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+        }
+
+        .login-signup-div {
+            width: 20%;
+            align-items: center;
+            justify-content: space-between;
+            display: flex;
+            padding-right: 110px;
+
+            .login-button {
+                background-color: transparent;
+                color: rgb(4, 4, 4);
+                border: 0;
+                padding: 2px;
+                font-size: 14px;
+                font-family: "Poppins", sans-serif;
+                border: 2px solid rgba(0, 0, 0, 0);
+                border-radius: 10px;
+                padding: 5px;
+                padding-left: 30px;
+                padding-right: 30px;
+            }
+
+            .login-button :hover {
+                background-color: rgba(0, 0, 0, 0.25);
+                border-radius: 10px;
+            }
+
+            // .signup-button {
+            //     background-color: black;
+            //     color: rgb(252, 250, 250);
+            //     border: 2px solid black;
+            //     border-radius: 10px;
+            //     padding: 5px;
+            //     padding-left: 30px;
+            //     padding-right: 30px;
+            //     font-size: 14px;
+            //     font-family: "Poppins", sans-serif;
+            //     margin-left: 30px;
+            // }
+        }
+
+        .login-signup-div-none {
+            display: none;
+        }
+
+        .user-credentials {
+            width: 25%;
+            align-items: center;
+            // justify-content: space-between;
+            padding-right: 60px;
+            display: flex;
+            margin-bottom: 10px;
+            gap: 12px;
+            color: white;
+
+            a {
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+            }
+
+            .user {
+                border: none;
+                background: transparent;
+                color: white;
+            }
+        }
+
+        .user-credentials-none {
+            display: none;
+        }
+    }
+
+    .sub-menu-none {
+        display: none;
+    }
+
+    .logo-name {
+        justify-content: space-around;
+        align-items: center;
+        display: flex;
+        width: 20%;
+    }
+
+    .search-bar-none {
+        display: none;
+    }
+
+    .search-bar {
+        // align-items: flex-end;
+        color: rgb(255, 255, 255);
+        width: fit-content;
+        margin-right: 110px;
+        margin-left: 600px;
+
+        .wrap {
+            width: 374px;
+            height: 48px;
+            margin-top: 10px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            padding: 5px;
+            border: 2px solid rgba(255, 255, 255, 0.5);
+            border-radius: 5px;
+
+            input {
+                width: 374px;
+                padding: 10px;
+                border: none;
+                border-radius: 0;
+                width: 90%;
+                background-color: transparent;
+            }
+
+            p {
+                padding: 7px;
+                color: rgb(255, 255, 255);
+            }
+
+            .search-icon-navbar {
+                font-size: 18px;
+                margin-top: 10px;
+            }
+
+            .cross-btn-nav-h {
+                padding: 7px;
+            }
+        }
+    }
+}
+
+.mobile-navbar {
+    display: none;
+}
+
+
+/*****************Media Query************************************************/
+
+// @media screen and (max-width: 600px) {
+//     .primary-navbar {
+//         width: 80%;
+//         height: auto;
+//         background-color: rgba(255, 255, 255, 0.75);
+//         color: black;
+//         .cross-mobile-navbar {
+//             display: flex;
+//             float: right;
+//             padding: 10px;
+//             height: auto;
+//             align-items: flex-start;
+//         }
+//         .sub-menu {
+//             .general-menu {
+//                 display: none;
+//             }
+//             /****************mobile navbar*******************/
+//             .primary-mobile-nav {
+//                 width: 100%;
+//                 height: 80px;
+//                 background-color: white;
+//                 color: black;
+//                 display: flex;
+//                 flex-direction: row;
+//                 align-items: center;
+//                 .three-bar button {
+//                     border: none;
+//                     background-color: transparent;
+//                     border-radius: 0;
+//                 }
+//             }
+//             .primary-mobile-nav-hide {
+//                 display: none;
+//             }
+//             .general-mobile-view-hide {
+//                 display: none;
+//             }
+//             .general-mobile-view {
+//                 position: relative;
+//                 display: inline-block;
+//                 width: fit-content;
+//                 ul {
+//                     float: left;
+//                     list-style: none;
+//                     display: flex;
+//                     flex-direction: column;
+//                     align-content: start;
+//                     justify-items: left;
+//                     li {
+//                         text-align: left;
+//                         padding: 10px;
+//                         a {
+//                             text-decoration: none;
+//                             color: black;
+//                         }
+//                     }
+//                 }
+//             }
+//             .login-signup-mobile-div {
+//                 width: 20%;
+//                 align-items: center;
+//                 justify-content: space-between;
+//                 display: flex;
+//                 padding-left: 50px;
+//                 padding-bottom: 100px;
+//                 .login-button {
+//                     background-color: transparent;
+//                     color: black;
+//                     border: 0;
+//                     padding: 2px;
+//                     font-size: 14px;
+//                     font-family: "Poppins", sans-serif;
+//                 }
+//                 .login-button :hover {
+//                     background-color: black;
+//                 }
+//                 .signup-button {
+//                     background-color: black;
+//                     color: black;
+//                     border: 2px solid black;
+//                     border-radius: 10px;
+//                     padding: 5px;
+//                     padding-left: 30px;
+//                     padding-right: 30px;
+//                     font-size: 14px;
+//                     font-family: "Poppins", sans-serif;
+//                     margin-left: 30px;
+//                 }
+//             }
+//             .user-credentials {
+//                 display: none;
+//             }
+//             .login-signup-div {
+//                 display: none;
+//             }
+//         }
+//         .logo-name {
+//             width: 20%;
+//             flex-direction: row-reverse;
+//             display: none;
+//         }
+//     }
+// }
+// @media screen and (max-width: 820px) {
+//     .primary-navbar {
+//         .sub-menu {
+//             width: 95%;
+//         }
+//         .logo-name {
+//             width: 5%;
+//         }
+//     }
+// }
+@media screen and (max-width: 800px) {
+    .primary-navbar {
+        display: none;
+    }
+
+    .whole-mobile-nav {
+        display: contents;
+
+        .mobile-navbar {
+            display: block;
+            background-color: rgba(255, 255, 255, 1);
+            height: 58px;
+            width: 100%;
+
+            .main-navigation-mobile {
+                // margin-top: 20px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+
+                .three-bar {
+                    margin-left: 19px;
+                    margin-bottom: 19px;
+                    margin-top: 10px;
+                    font-size: 18px;
+                }
+
+                .logo-mobile-main-hide {
+                    display: none;
+                }
+
+                .logo-mobile-main {
+                    left: 154px;
+                    top: 0px;
+                    border-radius: 0px;
+                    margin-right: -40px;
+                    margin-top: 15px;
+
+                    img {
+                        height: 24px;
+                        width: 19.826086044311523px;
+                    }
+                }
+
+                .search-cart-mobile-hide {
+                    display: none;
+                }
+
+                .search-box-mobile-hide {
+                    display: none;
+                }
+
+                .search-box-mobile {
+                    color: rgb(0, 0, 0);
+                    margin-right: 10px;
+                    margin-top: 15px;
+
+                    .wrap {
+                        height: 36px;
+                        width: 217px;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 5px;
+                        border: 2px solid rgba(0, 0, 0, 0.25);
+                        border-radius: 5px;
+
+                        .cross-search {
+                            margin-top: 10px !important;
+                            padding: 7px !important;
+                        }
+
+                        input {
+                            width: 374px;
+                            padding: 10px;
+                            border: none;
+                            border-radius: 0;
+                            width: 90%;
+                            background-color: transparent;
+                        }
+
+                        a {
+                            padding: 7px;
+                            color: rgb(0, 0, 0);
+                        }
+                    }
+                }
+
+                .search-cart-mobile {
+                    margin-left: 19px;
+                    margin-bottom: 19px;
+                    margin-top: 14px;
+                    font-size: 18px;
+
+                    .search-bar {
+                        padding-right: 20px;
+                    }
+
+                    .shopping-cart {
+                        padding-right: 20px;
+                        padding-left: 20px;
+                    }
+                }
+            }
+        }
+
+        .mobile-navbar-hide {
+            display: none;
+        }
+
+        .side-menu-hide {
+            // width: 10%;
+            transition: all 0.5s;
+            position: absolute;
+            left: -267px;
+            z-index: 10;
+            padding-top: 25px;
+            background-color: white;
+
+            // h5 {
+            //     display: none;
+            // }
+            // .general-mobile-view {
+            //     display: none;
+            // }
+            .cross-button {
+                text-align: right;
+                float: right;
+                padding: 14px;
+                width: 100%;
+                margin: 0px;
+            }
+
+            .general-mobile-view {
+                position: relative;
+                display: inline-block;
+                width: fit-content;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 18px;
+                letter-spacing: 0px;
+                text-align: left !important;
+                text-transform: capitalize;
+
+                ul {
+                    float: left;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-content: flex-start;
+                    justify-items: left;
+
+                    li {
+                        text-align: left;
+                        padding: 16px;
+
+                        a {
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                }
+
+                .login-signup-mobile {
+                    margin-top: 10px;
+                    padding-top: 40px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 18px;
+                    letter-spacing: 0px;
+                    font-family: "Poppins", sans-serif;
+
+                    .signup-button {
+                        background-color: black;
+                        color: rgb(252, 250, 250);
+                        border: 2px solid black;
+                        border-radius: 4px;
+                        padding: 6px 24px 6px 24px;
+                        font-size: 16px;
+                        font-family: "Poppins", sans-serif;
+                        margin-left: 8px;
+                        margin-top: 10px;
+                    }
+
+                    .login-button {
+                        background-color: transparent;
+                        color: black;
+                        font-size: 16px;
+                        font-family: "Poppins", sans-serif;
+                        border: 1px solid rgba(128, 128, 128, 0.001);
+                        border-radius: 4px;
+                        padding: 6px 24px 6px 24px;
+                        margin-left: 20px;
+                        margin-top: 10px;
+                    }
+                }
+            }
+        }
+
+        .side-menu {
+            position: absolute;
+            z-index: 10;
+            padding-top: 25px;
+            background-color: white;
+            height: 75.15vh;
+            width: 70%;
+            transition: all 0.5s;
+            left: 0;
+
+            // transition: 0.5s ease;
+            // transform: translateX(-180px);
+            .cross-button {
+                text-align: right;
+                float: right;
+                padding: 14px;
+                width: 100%;
+                margin: 0px;
+            }
+
+            .general-mobile-view {
+                position: relative;
+                display: inline-block;
+                width: fit-content;
+                font-size: 16px;
+                font-weight: 500;
+                line-height: 18px;
+                letter-spacing: 0px;
+                text-align: left !important;
+                text-transform: capitalize;
+
+                ul {
+                    float: left;
+                    list-style: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-content: flex-start;
+                    justify-items: left;
+
+                    li {
+                        text-align: left;
+                        padding: 16px;
+
+                        a {
+                            text-decoration: none;
+                            color: black;
+                        }
+                    }
+                }
+
+                .login-signup-mobile {
+                    margin-top: 10px;
+                    padding-top: 40px;
+                    font-size: 16px;
+                    font-weight: 500;
+                    line-height: 18px;
+                    letter-spacing: 0px;
+                    font-family: "Poppins", sans-serif;
+
+                    .signup-button {
+                        background-color: black;
+                        color: rgb(252, 250, 250);
+                        border: 2px solid black;
+                        border-radius: 4px;
+                        padding: 6px 24px 6px 24px;
+                        font-size: 16px;
+                        font-family: "Poppins", sans-serif;
+                        margin-left: 8px;
+                    }
+
+                    .login-button {
+                        background-color: transparent;
+                        color: black;
+                        font-size: 16px;
+                        font-family: "Poppins", sans-serif;
+                        border: 1px solid rgba(128, 128, 128, 0.1);
+                        border-radius: 4px;
+                        padding: 6px 24px 6px 24px;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}

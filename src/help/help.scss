@@ -1,0 +1,113 @@
+.help-main-div {
+    padding: 110px;
+    .container {
+        .how-can-i-help-you {
+            font-family: "Poppins";
+            font-size: 48px;
+            font-weight: 400;
+            line-height: 60px;
+            letter-spacing: 0px;
+            text-align: left;
+        }
+        .line-yellow {
+            width: 107px;
+            border: 1px solid #c9a74d;
+        }
+        .wrap {
+            display: flex;
+            flex-direction: row;
+            height: 48px;
+            width: 374px;
+            left: 0px;
+            top: 36px;
+            border-radius: 4px;
+            padding: 12px 16px 12px 16px;
+            background-color: rgba(246, 247, 249, 1);
+            .search-icon-help {
+                font-size: 18px;
+                margin-top: -2px;
+                padding-right: 4px;
+            }
+            input {
+                background-color: rgba(246, 247, 249, 1);
+                color: gray;
+                font-family: "Poppins";
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                letter-spacing: -0.25px;
+                text-align: left;
+                border: none;
+            }
+        }
+        // div{
+        //     container{
+        //         input{
+        //             display none
+        //         }
+        //         div{
+        //             input
+        //         }
+        //     }
+        // }
+        .inner-container {
+            margin-top: 26px;
+            .each-answer {
+                width: 600px;
+                // float: left;
+                text-align: left;
+                .display-ans {
+                    display: flex;
+                    padding: 16px;
+                    .expand-ans {
+                        color: #c9a74d;
+                        padding-right: 16px;
+                    }
+                    .answer-query {
+                        font-family: "Poppins";
+                        font-size: 16px;
+                        font-weight: 600;
+                        line-height: 24px;
+                        letter-spacing: 0px;
+                        text-align: left;
+                    }
+                }
+                .collapse-ans {
+                    margin-top: 44px;
+                    margin-bottom: 26px;
+                    .ans-ans {
+                        border-left: 2px solid #c9a74d;
+                        margin-left: 62px;
+                        padding-left: 10px;
+                        font-family: "Poppins";
+                        font-size: 16px;
+                        font-weight: 400;
+                        line-height: 24px;
+                        letter-spacing: 0px;
+                        text-align: left;
+                        color: rgba(173, 173, 173, 1);
+                    }
+                }
+            }
+        }
+    }
+}
+
+// ******************************************************
+@media screen and (max-width: 800px) {
+    .help-main-div {
+        padding: 50px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .help-main-div {
+        padding: 16px;
+        .wrap {
+            width: auto !important;
+        }
+        .each-answer {
+            width: auto !important;
+        }
+    }
+}
