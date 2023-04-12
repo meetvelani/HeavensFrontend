@@ -154,6 +154,15 @@ export async function getSpecialCake() {
     }).then((data) => data.json());
     return data;
 }
+export async function getYouAlsoLikeCake() {
+    const data = await fetch(`${domainName}${api.getYouAlsoLikeCake}`, {
+        method: "GET",
+        headers: {
+            "Content-Type": "application/json",
+        },
+    }).then((data) => data.json());
+    return data;
+}
 export async function getCouponDetail(coupon,token) {
     const data = await fetch(`${domainName}${api.getCouponDetail}?coupon_code=${coupon}&token=${token}`, {
         method: "GET",

@@ -17,6 +17,7 @@ import { addToCart, getCart, getProductById } from "../apiCalls";
 import { toast } from "react-toastify";
 import { useStateValue } from "../StateProvider";
 import { domainName } from "../constants";
+import ResponsiveCart from "./slider-you-may-also-like";
 // import { toast } from "react-toastify";
 
 
@@ -305,11 +306,11 @@ function ProductInfo() {
             <div className="col-4"></div>
           </div>
         </div>
-        {/* <div className=" mb-5 container p-4 pl-5">
+        <div className=" mb-5 container p-4 pl-5">
           <h1 className="mt-3 you-might-also-like">You Might Also Like</h1>
           <hr className="line-yellow" />
           <ResponsiveCart />
-        </div> */}
+        </div>
       </div>
     </div>
   );

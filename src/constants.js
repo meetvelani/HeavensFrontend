@@ -8,6 +8,7 @@ export const api = {
     login: "/api/login",
     register: "/api/register",
     getSpecialCake: "/api/get-special-cake",
+    getYouAlsoLikeCake: "/api/get-also-like-cake",
     getProductById: "/api/product",
     getCart: "/api/get-cart",
     updateCart: "/api/update-cart",
