@@ -1,22 +1,21 @@
 import React, { useState } from "react";
 import { FaTimes, FaUserAlt } from "react-icons/fa";
-// import { GoThreeBars } from "react-icons/go";
 import { AiOutlineSearch, AiOutlineShoppingCart } from "react-icons/ai";
-import Logo from "../../assets/images/heavensLogoFooter.svg";
+import Logo from "../../assets/images/header-logo.svg";
 import "./navbar-black.scss";
 import Sidebar from "./sidebar";
 import { Link } from "react-router-dom";
 import { useStateValue } from "../../StateProvider";
 import LoginFrontEnd from "../Login/login";
 import SignupFrontEnd from "../signup/signup";
+import { FiLogOut } from "react-icons/fi";
+import Dropdown from 'react-bootstrap/Dropdown';
 
 const NavbarBlack = () => {
-  const [{ isLogin, user }] = useStateValue();
+  const [{ isLogin, user },dispatch] = useStateValue();
 
   const [toggelState, updatedToggelState] = useState(false);
-  // const [toggelLogin, updatedLogin] = useState(true);
-  // const [toggelSignup, updatedSignup] = useState(true);
-  // const [toggelThreeBar, updatedThreeBar] = useState(true);
+
   const [toggelSearchMobile, updatedSearchMobile] = useState(true);
 
   const onClickSearchIconMobile = () => {
@@ -24,25 +23,21 @@ const NavbarBlack = () => {
     updatedSearchMobile(!toggelSearchMobile);
   };
 
-  // const handleLogin = () => {
-  //   console.log("LLL Clicked");
-  //   updatedLogin(!toggelLogin);
-  // };
+  const logout = ()=>{
+    sessionStorage.setItem("token","")
+    dispatch({
+      type: "SET_LOGIN_STATUS",
+      status: false,
+    })
+  }
 
-  // const handleSignup = () => {
-  //   console.log("SSS Clicked");
-  //   updatedSignup(!toggelSignup);
-  // };
 
   const onClickSearchIcon = () => {
     console.log("Clicked");
     updatedToggelState(!toggelState);
   };
 
-  // const onClickThreeBar = () => {
-  //   console.log(toggelThreeBar);
-  //   updatedThreeBar(!toggelThreeBar);
-  // };
+ 
   return (
     <div>
       <nav className="primary-navbar-black">
@@ -70,16 +65,16 @@ const NavbarBlack = () => {
                 <Link to="/shop">Shop</Link>
               </li>
               <li>
-                <Link to="/your-orders">Order</Link>
+                <Link to="/your-orders">Your Orders</Link>
               </li>
               <li>
                 <Link to="/help">Help</Link>
               </li>
-              <li>
+              {/* <li>
                 <button className="custom-button" onClick={onClickSearchIcon}>
                   <AiOutlineSearch />
                 </button>
-              </li>
+              </li> */}
               <li>
                 <button className="custom-button">
                   <Link to="/my-cart">
@@ -94,8 +89,16 @@ const NavbarBlack = () => {
             <SignupFrontEnd />
           </div>
           <div className={isLogin ? "user-credentials" : "user-credentials-none"}>
-            <button className="custom-button" ><Link to="/profile-1">{user[0]}</Link></button>
-            <button className="user" ><FaUserAlt /></button>
+            <Dropdown>
+              <Dropdown.Toggle variant="success" id="dropdown-basic">
+                {user[0]} <FaUserAlt />
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu>
+                {/* <Dropdown.Item href="#/action-1"><CgProfile /> <div>My Profile</div></Dropdown.Item> */}
+                <Dropdown.Item onClick={()=>logout()}><FiLogOut /> <div>Log Out</div></Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
           </div>
           {/* <div
             className={

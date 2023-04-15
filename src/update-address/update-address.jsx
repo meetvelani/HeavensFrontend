@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import "./update-address.scss";
 // import { Link } from "react-router-dom";
 import { Country, State, City } from 'country-state-city';
-import { addAddress, getAddress, getAddressById, updateDeliveryAddress } from "../apiCalls";
+import {  getAddressById, updateDeliveryAddress } from "../apiCalls";
 import { toast } from "react-toastify";
 import { useStateValue } from "../StateProvider";
 import { useParams } from "react-router-dom";

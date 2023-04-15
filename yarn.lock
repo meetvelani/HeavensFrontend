@@ -1296,6 +1296,18 @@
   "resolved" "https://registry.npmjs.org/@eslint/js/-/js-8.36.0.tgz"
   "version" "8.36.0"
 
+"@floating-ui/core@^1.2.6":
+  "integrity" "sha512-EvYTiXet5XqweYGClEmpu3BoxmsQ4hkj3QaYA6qEnigCWffTP3vNRwBReTdrwDwo7OoJ3wM8Uoe9Uk4n+d4hfg=="
+  "resolved" "https://registry.npmjs.org/@floating-ui/core/-/core-1.2.6.tgz"
+  "version" "1.2.6"
+
+"@floating-ui/dom@^1.0.0":
+  "integrity" "sha512-02vxFDuvuVPs22iJICacezYJyf7zwwOCWkPNkWNBr1U0Qt1cKFYzWvxts0AmqcOQGwt/3KJWcWIgtbUU38keyw=="
+  "resolved" "https://registry.npmjs.org/@floating-ui/dom/-/dom-1.2.6.tgz"
+  "version" "1.2.6"
+  dependencies:
+    "@floating-ui/core" "^1.2.6"
+
 "@fluentui/react-component-event-listener@~0.63.0":
   "integrity" "sha512-gSMdOh6tI3IJKZFqxfQwbTpskpME0CvxdxGM2tdglmf6ZPVDi0L4+KKIm+2dN8nzb8Ya1A8ZT+Ddq0KmZtwVQg=="
   "resolved" "https://registry.npmjs.org/@fluentui/react-component-event-listener/-/react-component-event-listener-0.63.1.tgz"
@@ -4027,7 +4039,7 @@
     "isobject" "^3.0.0"
     "static-extend" "^0.1.1"
 
-"classnames@^2.2.3", "classnames@^2.2.5", "classnames@^2.3.1":
+"classnames@^2.2.3", "classnames@^2.2.5", "classnames@^2.3.0", "classnames@^2.3.1":
   "integrity" "sha512-CSbhY4cFEJRe6/GQzIk5qXZ4Jeg5pcsP7b5peFSDpffpe1cqjASH/n9UTjBwOp6XpMSTwQ8Za2K5V02ueA7Tmw=="
   "resolved" "https://registry.npmjs.org/classnames/-/classnames-2.3.2.tgz"
   "version" "2.3.2"
@@ -10868,6 +10880,14 @@
   "version" "9.1.2"
   dependencies:
     "clsx" "^1.1.1"
+
+"react-tooltip@^5.11.1":
+  "integrity" "sha512-+2a/DvmOlPQd5e1f3s32E/+vv4Tv4UmPxZfCyeVr4BeY3SRCEKGHiE36jH+UtqxSuRP9TKviwmhow4gNDRXCMQ=="
+  "resolved" "https://registry.npmjs.org/react-tooltip/-/react-tooltip-5.11.1.tgz"
+  "version" "5.11.1"
+  dependencies:
+    "@floating-ui/dom" "^1.0.0"
+    "classnames" "^2.3.0"
 
 "react-transition-group@^4.4.2":
   "integrity" "sha512-pZcd1MCJoiKiBR2NRxeCRg13uCXbydPnmB4EOeRrY7480qNWO8IIgQG6zlDkm6uRMsURXPuKq0GWtiM59a5Q6g=="

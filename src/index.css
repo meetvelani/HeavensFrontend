@@ -8,3 +8,45 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
+
+.btn-primary {
+    background: #070707;
+    border-radius: 56px;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 4px !important;
+
+
+}
+
+.btn-primary:hover {
+    background: #C9A74D;
+    border-color:#C9A74D ;
+}
+
+.btn-secondary {
+    background: #FFFFFF;
+    border: 1px solid #DCDEE6;
+    border-radius: 4px;
+    color: #070707;
+    border-radius: 4px;
+
+
+}
+.btn-secondary:hover{
+    background: #C9A74D;
+    color: #FFFFFF;
+}
+
+.btn-tertiary{
+    background: transparent;
+    border-radius: 4px;
+
+
+}
+
+ .btn-tertiary:hover{
+    background: #C9A74D !important;
+    color: #FFFFFF !important;
+
+}

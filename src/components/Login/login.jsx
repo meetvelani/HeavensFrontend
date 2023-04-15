@@ -68,7 +68,7 @@ function LoginFrontEnd() {
   };
   return (
     <div className="login-main-div">
-      <Button variant="primary" onClick={handleShow} className="login-button">
+      <Button variant="primary btn-tertiary" onClick={handleShow} className="login-button">
         Login
       </Button>
 

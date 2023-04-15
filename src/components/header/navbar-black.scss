@@ -18,30 +18,44 @@
     height: 71px;
     display: flex;
     font-size: 14px;
+    justify-content: space-between;
+
+    padding: 0 10%;
     background-color: rgba(255, 255, 255, 1);
+
     .cross-mobile-navbar {
         display: none;
     }
+
     .sub-menu {
         display: flex;
-        width: 70%;
         color: black;
         align-items: center;
+        gap: 30px;
+
+
         .general-mobile-view {
             display: none;
         }
+
         .general-menu {
             display: flex;
             flex-direction: row;
-            width: 100%;
+
             ul {
-                width: 85%;
+                gap: 28px;
+                margin-top: unset;
+                margin-bottom: unset;
                 list-style: none;
                 display: flex;
                 flex-direction: row;
                 align-items: center;
                 justify-content: space-between;
+
                 li a {
+                    font-weight: 500;
+                    font-size: 12px;
+                    line-height: 18px;
                     text-decoration: none;
                     color: black;
                     align-items: center;
@@ -49,86 +63,84 @@
                 }
             }
         }
+
         .login-signup-div {
-            width: 24%;
             align-items: center;
             justify-content: space-between;
             display: flex;
-            padding-right: 110px;
+            gap: 12px;
+
             .login-button {
-                background-color: transparent;
                 color: black;
-                border: 0;
-                padding: 2px;
+                font-weight: 600;
                 font-size: 14px;
-                font-family: "Poppins", sans-serif;
+                line-height: 20px;
+                width: 85px;
+                height: 32px;
             }
-            .login-button :hover {
-                background-color: black;
-            }
-            .signup-button {
-                background-color: black;
-                color: rgb(252, 250, 250);
-                border: 2px solid black;
-                border-radius: 10px;
-                padding: 5px;
-                padding-left: 30px;
-                padding-right: 30px;
-                font-size: 14px;
-                font-family: "Poppins", sans-serif;
-                margin-left: 30px;
-            }
+
         }
+
         .login-signup-div-none {
             display: none;
         }
+
         .user-credentials {
-            width: 25%;
-            align-items: center;
-            justify-content: space-between;
-            padding-right: 60px;
-            display: flex;
-            .custom-button {
-                background-color: transparent;
+            .dropdown-toggle::after {
+                display: none;
+            }
+            .dropdown-toggle {
+                white-space: nowrap;
+                background: transparent;
                 border: none;
-                // color: inherit;
-                cursor: pointer;
-                font-size: inherit;
-                padding: 0;
-                text-decoration: none;
+                display: flex;
+                gap: 8px;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 18px;
                 color: black;
-                a {
-                    color: black;
-                    text-decoration: none;
+                svg{
+                    margin: auto;
                 }
             }
-            .user{
-                border: none;
-                background: transparent;
+            .dropdown-item {
+                display: flex;
+                gap: 18px;
+                svg{
+                    margin: auto 0;
+                }
+            }
+            .dropdown-item:active{
+                background: #C9A74D;
             }
         }
+
         .user-credentials-none {
             display: none;
         }
     }
+
     .sub-menu-none {
         display: none;
     }
+
     .logo-name {
         justify-content: space-around;
         align-items: center;
         display: flex;
-        width: 30%;
     }
+
     .search-bar-none {
         display: none;
     }
+
     .search-bar {
         // align-items: flex-end;
         color: black;
         width: fit-content;
         margin-right: 110px;
         margin-left: 600px;
+
         .wrap {
             width: 374px;
             margin-top: 10px;
@@ -139,6 +151,7 @@
             padding: 5px;
             border: 2px solid rgba(0, 0, 0, 0.25);
             border-radius: 5px;
+
             input {
                 width: 374px;
                 padding: 10px;
@@ -147,6 +160,7 @@
                 width: 90%;
                 background-color: transparent;
             }
+
             .custom-button {
                 background-color: transparent;
                 border: none;
@@ -294,51 +308,63 @@
         text-decoration: none;
         color: black;
     }
+
     .primary-navbar-black {
         display: none;
     }
+
     .whole-mobile-nav {
         display: contents;
+
         .mobile-navbar {
             display: block;
             background-color: rgba(255, 255, 255, 1);
             height: 58px;
             width: 100%;
+
             .main-navigation-mobile {
                 // margin-top: 20px;
                 display: flex;
                 flex-direction: row;
                 justify-content: space-between;
+
                 .three-bar {
                     margin-left: 19px;
                     margin-bottom: 19px;
                     margin-top: 10px;
                     font-size: 18px;
                 }
+
                 .logo-mobile-main-hide {
                     display: none;
                 }
+
                 .logo-mobile-main {
                     left: 154px;
                     top: 0px;
                     border-radius: 0px;
                     margin-right: -40px;
                     margin-top: 15px;
+
                     img {
                         height: 24px;
                         width: 19.826086044311523px;
                     }
                 }
+
                 .search-cart-mobile-hide {
                     display: none;
                 }
+
                 .search-box-mobile-hide {
                     display: none;
                 }
+
                 .search-box-mobile {
                     color: rgb(0, 0, 0);
                     margin-right: 10px;
                     margin-top: 15px;
+
                     .wrap {
                         height: 36px;
                         width: 217px;
@@ -349,6 +375,7 @@
                         padding: 5px;
                         border: 2px solid rgba(0, 0, 0, 0.25);
                         border-radius: 5px;
+
                         input {
                             width: 374px;
                             padding: 10px;
@@ -357,24 +384,29 @@
                             width: 90%;
                             background-color: transparent;
                         }
+
                         a {
                             padding: 7px;
                             color: rgb(0, 0, 0);
                         }
                     }
                 }
+
                 .search-cart-mobile {
                     margin-left: 19px;
                     margin-bottom: 19px;
                     margin-top: 14px;
                     font-size: 18px;
+
                     .search-bar {
                         padding-right: 20px;
                     }
+
                     .shopping-cart {
                         cursor: pointer;
                         padding-right: 20px;
                         padding-left: 20px;
+
                         a {
                             color: black;
                         }
@@ -382,9 +414,11 @@
                 }
             }
         }
+
         .mobile-navbar-hide {
             display: none;
         }
+
         .side-menu-hide {
             // width: 10%;
             transition: all 0.5s;
@@ -393,6 +427,7 @@
             z-index: 10;
             padding-top: 25px;
             background-color: white;
+
             // h5 {
             //     display: none;
             // }
@@ -406,6 +441,7 @@
                 width: 100%;
                 margin: 0px;
             }
+
             .general-mobile-view {
                 position: relative;
                 display: inline-block;
@@ -416,6 +452,7 @@
                 letter-spacing: 0px;
                 text-align: left !important;
                 text-transform: capitalize;
+
                 ul {
                     float: left;
                     list-style: none;
@@ -423,15 +460,18 @@
                     flex-direction: column;
                     align-content: flex-start;
                     justify-items: left;
+
                     li {
                         text-align: left;
                         padding: 16px;
+
                         a {
                             text-decoration: none;
                             color: black;
                         }
                     }
                 }
+
                 .login-signup-mobile {
                     margin-top: 10px;
                     padding-top: 40px;
@@ -440,6 +480,7 @@
                     line-height: 18px;
                     letter-spacing: 0px;
                     font-family: "Poppins", sans-serif;
+
                     .signup-button {
                         background-color: black;
                         color: rgb(252, 250, 250);
@@ -451,6 +492,7 @@
                         margin-left: 8px;
                         margin-top: 10px;
                     }
+
                     .login-button {
                         background-color: transparent;
                         color: black;
@@ -465,6 +507,7 @@
                 }
             }
         }
+
         .side-menu {
             position: absolute;
             z-index: 10;
@@ -474,6 +517,7 @@
             width: 70%;
             transition: all 0.5s;
             left: 0;
+
             // transition: 0.5s ease;
             // transform: translateX(-180px);
             .cross-button {
@@ -483,6 +527,7 @@
                 width: 100%;
                 margin: 0px;
             }
+
             .general-mobile-view {
                 position: relative;
                 display: inline-block;
@@ -493,6 +538,7 @@
                 letter-spacing: 0px;
                 text-align: left !important;
                 text-transform: capitalize;
+
                 ul {
                     float: left;
                     list-style: none;
@@ -500,15 +546,18 @@
                     flex-direction: column;
                     align-content: flex-start;
                     justify-items: left;
+
                     li {
                         text-align: left;
                         padding: 16px;
+
                         a {
                             text-decoration: none;
                             color: black;
                         }
                     }
                 }
+
                 .login-signup-mobile {
                     margin-top: 10px;
                     padding-top: 40px;
@@ -517,6 +566,7 @@
                     line-height: 18px;
                     letter-spacing: 0px;
                     font-family: "Poppins", sans-serif;
+
                     .signup-button {
                         background-color: black;
                         color: rgb(252, 250, 250);
@@ -527,6 +577,7 @@
                         font-family: "Poppins", sans-serif;
                         margin-left: 8px;
                     }
+
                     .login-button {
                         background-color: transparent;
                         color: black;

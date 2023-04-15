@@ -62,7 +62,7 @@ function SignupFrontEnd() {
   };
   return (
     <div className="signup-main-div">
-      <Button className="signup-button" variant="primary" onClick={handleShow}>
+      <Button className="signup-button btn-primary " variant="primary" onClick={handleShow}>
         SignUp
       </Button>
 
