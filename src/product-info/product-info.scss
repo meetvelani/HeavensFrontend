@@ -1,32 +1,42 @@
 .product-info-root {
     background-color: white;
+
     .slick-prev {
         color: black;
         background-color: gray;
     }
+
     .slick-next {
         color: black;
         background-color: gray;
     }
+
     .whole-div-slider-cart-details {
         padding-top: 15%;
         padding-left: 15%;
         padding-bottom: 16%;
+        display: flex;
+        gap: 24px;
+
         img {
             width: 369px !important;
             height: 369px;
         }
     }
+
     .cart-details {
         text-align: left;
+
         .cart-img {
             width: 120px;
+
             img {
                 width: 100px !important;
                 height: 100px;
                 float: right;
             }
         }
+
         h3 {
             // text-align: left;
             font-family: "Poppins", sans-serif, sans-serif;
@@ -39,6 +49,7 @@
             margin-bottom: 6px !important;
             // text-align: left;
         }
+
         .id-name {
             // font-weight: bold;
             color: gray;
@@ -47,9 +58,11 @@
             font-size: 12px;
             line-height: 14px;
         }
+
         .starts-cake-des {
             margin-bottom: 5px;
         }
+
         .description {
             width: 249px;
             height: fit-content;
@@ -62,6 +75,7 @@
             color: #000000;
             margin-bottom: 24px !important;
         }
+
         .quantity {
             width: 52px;
             height: 18px;
@@ -74,42 +88,50 @@
             color: #000000;
             margin-bottom: 16px !important;
         }
+
         .input-group {
             position: static;
             flex-wrap: nowrap;
             align-items: normal;
             width: 100px;
             border: 1px solid rgba(128, 128, 128, 0.5);
+
             .btn {
                 border: none;
             }
+
             .btn:hover {
                 // border: 1px solid rgba(128, 128, 128, 0.5);
                 border-radius: 0px;
                 background-color: rgba(128, 128, 128, 0.5);
             }
+
             input {
                 border: none;
             }
         }
+
         .add-to-cart-button {
             .btn {
                 width: 100%;
                 height: 40px;
                 border-radius: 4px;
                 font-family: "Poppins", sans-serif, sans-serif;
+
                 a {
                     color: white;
                     text-decoration: none;
                 }
             }
         }
+
         .cart-img {
             img {
                 width: 100px;
                 height: 100px;
             }
         }
+
         .badge-cake {
             // height: 18px;
             // width: 95px;
@@ -135,6 +157,7 @@
             text-align: center;
         }
     }
+
     .you-might-also-like {
         // width: 449px;
         // height: 60px;
@@ -157,6 +180,7 @@
 // **************************************************************************************
 .offcanvas-title {
     margin: auto;
+
     .cart-sidebar-heading {
         font-family: "Poppins", sans-serif;
         font-size: 48px;
@@ -166,6 +190,7 @@
         text-align: center;
         margin: auto;
     }
+
     .line-yellow {
         width: 107px;
         // height: 0px;
@@ -181,24 +206,29 @@
     height: 430px;
     overflow: auto;
     scrollbar-width: none;
+
     .whole-row {
         display: flex;
         flex-direction: row;
         margin-bottom: 20px;
+
         .cart-img {
             img {
                 width: 100px;
                 height: 100px;
             }
         }
+
         .content-col {
             display: flex;
             flex-direction: row;
             padding-left: 12px;
+
             .close-btn-card {
                 width: 100%;
                 float: right;
             }
+
             h3 {
                 //styleName: Medium : 16px | Line height : 24px;
                 // font-family: Poppins;
@@ -208,6 +238,7 @@
                 letter-spacing: 0px;
                 text-align: left;
             }
+
             .col-xl-1 {
                 .input-group {
                     position: static;
@@ -215,14 +246,17 @@
                     align-items: normal;
                     width: fit-content;
                     border: 1px solid rgba(128, 128, 128, 0.5);
+
                     .btn {
                         border: none;
                     }
+
                     .btn:hover {
                         // border: 1px solid rgba(128, 128, 128, 0.5);
                         border-radius: 0px;
                         background-color: rgba(128, 128, 128, 0.5);
                     }
+
                     input {
                         border: none;
                     }
@@ -230,6 +264,7 @@
             }
         }
     }
+
     .div-total-amount {
         float: left;
         position: fixed;
@@ -238,6 +273,7 @@
         margin-bottom: 34px;
         margin-top: 200px;
         width: 37%;
+
         // width: 100%;
         .item-cake {
             .subtotal-h5 {
@@ -249,6 +285,7 @@
                 letter-spacing: 0px;
                 text-align: left;
             }
+
             .line1 {
                 width: 100%;
                 color: black;
@@ -256,8 +293,10 @@
                 margin-bottom: 50px;
             }
         }
+
         .btn-view-cart {
             width: 300px;
+
             a {
                 text-decoration: none;
                 color: white;
@@ -265,33 +304,48 @@
         }
     }
 }
+
 .offcanvas-cake-container::-webkit-scrollbar {
-    width: 20px; /* <-- This sets the thickness of the VERTICAL scrollbar */
-    height: 20px; /* <-- This sets the thickness of the HORIZONTAL scrollbar */
-  }
+    width: 20px;
+    /* <-- This sets the thickness of the VERTICAL scrollbar */
+    height: 20px;
+    /* <-- This sets the thickness of the HORIZONTAL scrollbar */
+}
 
 // ************************************************************************************
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
+    .product-info-root .whole-div-slider-cart-details {
+        padding: 16px ;
+        flex-direction: column;
+    }
+
     .add-to-cart-root {
         padding: 16px;
+
         .container-1 {
+
             // display: flex;
             // flex-direction: column;
             .col-8 {
                 width: 100%;
+
                 .whole-div-slider-cart-details {
                     padding-top: 44px;
                     padding-left: 10px;
                     display: flex;
                     flex-direction: column;
+
                     img {
                         height: auto;
                     }
+
                     .cart-details {
                         margin-top: 16px;
+
                         h3 {
                             font-weight: bold;
                         }
+
                         .btn-add-to-cart {
                             width: 100%;
                         }
@@ -308,6 +362,7 @@
         .container-1 {
             display: flex;
             flex-direction: row;
+
             .col-cake-8 {
                 .whole-div-slider-cart-details {
                     display: flex;

@@ -172,11 +172,11 @@ function ProductInfo() {
       <div className="product-info-root">
         <div className="container">
           <div className="row container-1">
-            <div className="col-8">
+            <div className="column">
               {(product !== "") ?
 
-                <div className="row whole-div-slider-cart-details">
-                  <div className="col whole-content">
+                <div className=" whole-div-slider-cart-details">
+                  <div className=" whole-content">
                     <div
                       id="carouselExampleControls"
                       className="carousel slide"
@@ -227,18 +227,18 @@ function ProductInfo() {
                       </button>
                     </div>
                   </div>
-                  <div className="col cart-details">
+                  <div className=" cart-details">
                     <h3>{product.title}</h3>
                     <h3>Rs {product.price}</h3>
-                    <p>
+                    {/* <p>
                       <span className="badge bg-light text-secondary badge-cake">
                         Redvelvet Cake
                       </span>{" "}
                       <span className="badge bg-light text-secondary badge-cake">
                         Cake
                       </span>
-                    </p>
-                    <p className="id-name">Id. {product.pk}</p>
+                    </p> */}
+                    <p className="id-name">Id. {product.id}</p>
                     <p className="text-warning starts-cake-des">
                       {
                         Array.from(Array(product.rating)).map(rating => <AiFillStar />)
@@ -306,7 +306,7 @@ function ProductInfo() {
                 </div>
                 : <></>}
             </div>
-            <div className="col-4"></div>
+            {/* <div className="col-4"></div> */}
           </div>
         </div>
         <div className=" mb-5 container p-4 pl-5">
