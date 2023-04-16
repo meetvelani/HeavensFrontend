@@ -151,10 +151,8 @@ function ProductInfo() {
       const reMessage = Re.status[0].ResponseMessage
       console.log(Re)
       if (reMessage === "Product fetched successfully") {
-        const data = JSON.parse(Re.Value)
-        console.log(data)
-        setProduct(data[0]);
-        // console.log(product.length)
+        const data = (Re.Value)
+        setProduct(data);
       }
       else {
         toast.error(reMessage)
@@ -166,7 +164,7 @@ function ProductInfo() {
       })
     };
     fetchProduct(id);
-  }, [id,dispatch]);
+  }, [id, dispatch]);
 
 
   return (
@@ -186,8 +184,13 @@ function ProductInfo() {
                     >
                       <div className="carousel-inner">
                         <div className="carousel-item active">
-                          <img src={domainName + "/uploads/" + product["fields"]["image_1"]} className="d-block w-100" alt="..." />
+                          <img src={domainName + product["image_1"]} className="d-block w-100" alt="..." />
                         </div>
+                        {product["other_image"].map(image =>
+                          <div className="carousel-item">
+                            <img src={domainName + "/uploads/" + image} alt="" />
+                          </div>
+                        )}
                         {/* <div className="carousel-item">
                           <img src={Cake2} className="d-block w-100" alt="..." />
                         </div>
@@ -225,8 +228,8 @@ function ProductInfo() {
                     </div>
                   </div>
                   <div className="col cart-details">
-                    <h3>{product.fields.title}</h3>
-                    <h3>Rs {product.fields.price}</h3>
+                    <h3>{product.title}</h3>
+                    <h3>Rs {product.price}</h3>
                     <p>
                       <span className="badge bg-light text-secondary badge-cake">
                         Redvelvet Cake
@@ -238,12 +241,12 @@ function ProductInfo() {
                     <p className="id-name">Id. {product.pk}</p>
                     <p className="text-warning starts-cake-des">
                       {
-                        Array.from(Array(product.fields.rating)).map(rating => <AiFillStar />)
+                        Array.from(Array(product.rating)).map(rating => <AiFillStar />)
                       }
 
                     </p>
                     <p className="description">
-                      "{product.fields.description}"
+                      "{product.description}"
                     </p>
                     <p className="quantity">Quantity</p>
                     <IncDecCounter quantity={quantity} setQuantity={setQuantity} />
