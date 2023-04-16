@@ -15,6 +15,7 @@ export const api = {
     getCouponDetail: "/api/get-coupon-detail",
     verifyToken: "/api/verify/login_token",
     addToCart: "/api/add-to-cart",
+    removeToCart: "/api/delete-from-cart",
     createOrder: "/api/create-order",
     getOrder: "/api/get-orders",
     createPaymentOrder: "/api/payment",

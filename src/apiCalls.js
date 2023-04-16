@@ -48,6 +48,17 @@ export async function addToCart(productData) {
     }).then((data) => data.json());
     return data;
 }
+export async function removeToCart(cartDetail) {
+
+    const data = await fetch(`${domainName}${api.removeToCart}`, {
+        method: "DELETE",
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify(cartDetail),
+    }).then((data) => data.json());
+    return data;
+}
 export async function addAddress(addressDetail) {
 
     const data = await fetch(`${domainName}${api.addAddress}`, {

@@ -36,7 +36,7 @@ function OffCanvasExample({ name, product, quantity, setQuantity, ...props }) {
         const token = sessionStorage.getItem("token") || ""
 
         const productData = {
-          "productId": product.pk,
+          "productId": product.id,
           "quantity": quantity,
           "token": token
         }

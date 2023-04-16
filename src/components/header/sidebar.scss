@@ -6,7 +6,8 @@
 
 .general-mobile-view {
     position: relative;
-    display: inline-block;
+    display: flex;
+    flex-direction: column;
     width: fit-content;
     font-size: 16px;
     font-weight: 500;
@@ -36,8 +37,8 @@
     }
 
     .login-signup-mobile {
-        margin-top: 10px;
-        padding-top: 40px;
+        // margin-top: 10px;
+        // padding-top: 40px;
         font-size: 16px;
         font-weight: 500;
         line-height: 18px;
@@ -63,7 +64,7 @@
             border: 1px solid rgba(128, 128, 128, 0.1);
             border-radius: 4px;
             padding: 6px 24px 6px 24px;
-            margin-left: 20px;
+            margin-left: 16px;
         }
 
     }

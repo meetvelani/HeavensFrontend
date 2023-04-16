@@ -2,10 +2,10 @@
 import "./my-cart.scss";
 // import { Link } from "react-router-dom";
 import React, { useEffect, useRef, useState } from "react";
-// import { AiFillStar } from "react-icons/ai";
+import { RxCross2 } from "react-icons/rx";
 // import Cake1 from "../assets/images/card1.png";
 // import IncDecCounter from "../product-info/inc-dec";
-import { getCart, getCouponDetail, verifyToken } from "../apiCalls";
+import { getCart, getCouponDetail, removeToCart, verifyToken } from "../apiCalls";
 import { useStateValue } from "../StateProvider";
 import { toast } from "react-toastify";
 import CartIncDecCounter from "./cartProductIncDec";
@@ -58,6 +58,27 @@ function MyCart({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, 
     }
   }
 
+  const removeCart = async (id)=>{
+
+    const re= await removeToCart({token:token,productId:id})
+    const reMessage = re.status[0].Message
+    if (reMessage==="Successfully Product removed."){
+
+      window.location.reload()
+
+    }
+    else{
+      toast.error("Something Went Wrong Please Reload.")
+    }
+    // console.log(id)
+    // const cart = cartDetail.splice(cartDetail.findIndex(e => e.id === id),1)
+    
+    // setCartDetail(cart)
+    // console.log(cartDetail)
+    
+
+  }
+
 
   useEffect(() => {
 
@@ -103,7 +124,9 @@ function MyCart({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, 
 
   return (
     <div>
-      {/* <NavbarBlack/> */}
+      {/* <NavbarBlack/> */}  
+      {cartDetail.length >0?
+
       <div className="my-cart">
         <div className="container">
           <h2 className="my-cart-heading">My Cart</h2>
@@ -118,6 +141,9 @@ function MyCart({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, 
                 <h3>{cartProduct.title}</h3>
                 <h3>Rs {cartProduct.price}</h3>
                 <div className="quantity"> <CartIncDecCounter productPrice={cartProduct.price} qty={cartProduct.quantity} productId={cartProduct.id} setCartTotal={setCartTotal} cartTotal={cartTotal} setCartSubTotal={setCartSubTotal} cartSubTotal={cartSubTotal} /> </div>
+              </div>
+              <div className="remove-from-cart">
+                <RxCross2 onClick={()=>removeCart(cartProduct.id)} />
               </div>
             </div>
           )}
@@ -178,6 +204,7 @@ function MyCart({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, 
           </div>
         </div>
       </div>
+      :<div className="empty-cart"> Your Cart Is Empty.....</div>}
       {/* <Footer/> */}
     </div>
   );
