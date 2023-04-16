@@ -97,7 +97,7 @@ const ResponsiveCart = () => {
       <Slider {...settings}>
         {alsoLikePrdt.map((product) => (
 
-          <div>
+          <div className="slider-item">
             <Link to={`/product-info?id=${product.pk}`} ><img className="img-slider" src={`${domainName}/uploads/${product.fields.image_1}`} alt={product.title} /></Link>
             <div className="content">
               <h3>{product.fields.title}</h3>
@@ -107,12 +107,12 @@ const ResponsiveCart = () => {
                 }
               </p>
               <h3>Rs {product.fields.price}</h3>
-              <p>
+              {/* <p>
                 <span className="badge bg-light text-secondary">
                   Redvelvet Cake
                 </span>{" "}
                 <span className="badge bg-light text-secondary">Cake</span>
-              </p>
+              </p> */}
             </div>
             {/* <span className="text-of-card">Red velvet</span> */}
           </div>
