@@ -1,10 +1,13 @@
 .modal-dialog {
     width: fit-content;
+    margin: auto;
+
 }
+
 
 .modal-content {
     height: auto;
-    width: 354px;
+    width: min(354px,100%);
     border-radius: 4px;
     z-index: 100;
 }
@@ -20,7 +23,7 @@
 
 .modal-body {
     .hc {
-        margin-left: 10px;
+        // margin-left: 10px;
         font-family: "Poppins";
         font-size: 16px;
         font-weight: 600;
@@ -31,9 +34,9 @@
         margin-top: 16px;
     }
     .input-hc {
-        margin-left: 10px;
+        // margin-left: 10px;
         height: 48px;
-        width: 300px;
+        width: min(300px,100%);
         left: 0px;
         top: 28px;
         border-radius: 4px;
@@ -50,11 +53,11 @@
         text-align: left;
     }
     .btn-hc {
-        margin-left: 10px;
+        // margin-left: 10px;
         margin-top: 16px;
-        width: 80%;
+        // width: 80%;
         height: 48px;
-        width: 300px;
+        width: min(300px,100%);
         left: 42px;
         top: 198px;
         border-radius: 4px;
@@ -77,7 +80,7 @@
     }
     .email {
         height: 48px;
-        width: 300px;
+        width: min(300px,100%);
         margin: auto;
         border-radius: 4px;
         margin-top: 24px;
