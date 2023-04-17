@@ -1,5 +1,13 @@
 .your-orders {
     padding: 110px;
+    .empty-order{
+        height: 50vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: 600;
+    }
     .heading-ofy {
         .shop-heading {
             // padding-left: 25px;

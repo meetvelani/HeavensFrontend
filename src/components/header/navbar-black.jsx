@@ -59,7 +59,7 @@ const NavbarBlack = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="#about-section">About</a>
+                {/* <a href="#about-section">About</a> */}
               </li>
               <li>
                 <Link to="/shop">Shop</Link>
@@ -171,7 +171,7 @@ const NavbarBlack = () => {
                 <AiOutlineSearch />
               </span>
               <span className="shopping-cart">
-                <Link to="/your-orders">
+                <Link to="/my-cart">
                   <AiOutlineShoppingCart />
                 </Link>
               </span>

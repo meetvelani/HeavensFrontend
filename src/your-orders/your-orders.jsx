@@ -5,12 +5,15 @@ import "./your-order.scss";
 // import DateTime from "../components/date-time";
 import { Link } from "react-router-dom";
 import { getOrder } from "../apiCalls";
-import { toast } from "react-toastify";
+// import { toast } from "react-toastify";
 import { domainName } from "../constants";
 import AOS from 'aos';
+import { useStateValue } from "../StateProvider";
 
 
 function YourOrders() {
+  const [{isLogin}] = useStateValue();
+
   const [orders, setOrders] = useState([])
 
   useEffect(() => {
@@ -32,7 +35,7 @@ function YourOrders() {
 
       }
       else {
-        toast.error(reMessage)
+        // toast.error(reMessage)
       }
 
     }
@@ -40,7 +43,10 @@ function YourOrders() {
 
   }, [])
   return (
+    
     <div className="your-orders">
+      {isLogin?<>
+      {orders.length > 0 ?
       <div className="container">
         <div className="heading-ofy">
           <h1 className="shop-heading">Your Orders</h1>
@@ -73,7 +79,10 @@ function YourOrders() {
           )}
 
         </div>
-      </div>
+      </div>:
+      <div className="empty-order">You Don't Have Any Orders.....</div>}</>:<div className="empty-order">
+        Please Login First...
+        </div>}
     </div>
   );
 }

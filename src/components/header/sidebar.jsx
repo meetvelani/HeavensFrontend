@@ -55,14 +55,14 @@ function OffCanvasExample({ name, ...props }) {
             <div className="general-mobile-view">
               <ul>
                 <li onClick={handleClose}><Link to="/" >home</Link></li>
-                <li onClick={handleClose}><a href="/#about-section">about</a></li>
+                {/* <li onClick={handleClose}><a href="/#about-section">about</a></li> */}
                 <li onClick={handleClose}><Link to="/shop">Shop</Link></li>
-                <li onClick={handleClose}><Link to="/your-orders">Orders</Link></li>
+                <li onClick={handleClose}><Link to="/your-orders">Your Orders</Link></li>
                 <li onClick={handleClose}><Link to="/help">Help</Link></li>
               </ul>
               {isLogin ? <div className="user-credentials" >
                 <button className="user" ><FaUserAlt /></button>
-                <button className="username" ><Link to="/profile-1">{user[0]}</Link></button>
+                <button className="username" ><Link>{user[0]}</Link></button>
                 <div className="log-out">
                   <button className="logout-button" onClick={()=>logout()}>
                     Logout

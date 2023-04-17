@@ -17,7 +17,7 @@ import AOS from 'aos';
 // import Footer from "../components/footer/footer";
 
 function MyCart({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, cartTotal, setCartTotal, setCartSubTotal, cartSubTotal, discountAmount, setDiscountAmount }) {
-  const [, dispatch] = useStateValue();
+  const [{isLogin}, dispatch] = useStateValue();
 
   const [couponCodeStatus, SetCouponCodeStatus] = useState("")
   const token = sessionStorage.getItem("token") || ""
@@ -133,6 +133,7 @@ function MyCart({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, 
   return (
     <div>
       {/* <NavbarBlack/> */}  
+      {isLogin?<>
       {cartDetail.length >0?
 
       <div className="my-cart">
@@ -212,7 +213,8 @@ function MyCart({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, 
           </div>
         </div>
       </div>
-      :<div className="empty-cart"> Your Cart Is Empty.....</div>}
+      :<div className="empty-cart"> Your Cart Is Empty.....</div>}</>:
+      <div className="empty-cart"> Please Login First... </div> }
       {/* <Footer/> */}
     </div>
   );

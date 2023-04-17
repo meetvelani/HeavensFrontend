@@ -71,7 +71,7 @@ const Func = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <a href="/home#about-section">About</a>
+                {/* <a href="/home#about-section">About</a> */}
               </li>
               <li>
                 <Link to="/shop">Shop</Link>
@@ -165,7 +165,7 @@ const Func = () => {
                 <AiOutlineSearch />
               </span>
               <span className="shopping-cart">
-                <Link to="/your-orders"><AiOutlineShoppingCart /></Link>
+                <Link to="/my-cart"><AiOutlineShoppingCart /></Link>
               </span>
             </div>
             <div
