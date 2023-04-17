@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Cake from "../assets/images/home_cake_carousal.png";
 import Line from "../assets/images/Line65.png";
 import BrownCake from "../assets/images/brown_cake.png";
@@ -19,14 +19,17 @@ import Slider from "react-slick";
 import Responsive from "./slider";
 import WhiteArr_right from "../assets/images/white-arrow-right.png";
 import WhiteArr_left from "../assets/images/white-arrow-left.png"
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 // import { useStateValue } from "../StateProvider";
 
 function NextArrow(props) {
   const { onClick } = props;
   return (
     <div
-    className={"slider-action slider-action-next"}
-    onClick={onClick}
+      className={"slider-action slider-action-next"}
+      onClick={onClick}
     >
       <img src={WhiteArr_right} alt="" />
     </div>
@@ -57,10 +60,20 @@ function Home() {
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
   };
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    AOS.init({
+      once: true,
+    }
+    );
+
+  }, []);
   return (
     <main>
       <section className="home-main">
-        <div className="wrap2">
+
+        <div className="wrap2" data-aos="fade-up" data-aos-duration="1200">
           <div className="spcl-cake-mobile-title">
             Special of the Day <br />
             <img src={Line} alt="Line" />
@@ -78,7 +91,7 @@ function Home() {
               </div>
             </Slider>
           </div>
-          <div className="col2">
+          <div className="col2" >
             <h2 className="spcl-day">Special of the Day</h2>
             <img className="line1" src={Line} alt="line" />
             <p className="content-1">
@@ -92,7 +105,7 @@ function Home() {
       </section>
 
       <section className="section2-home">
-        <div className="wrap">
+        <div className="wrap" data-aos="fade-up" data-aos-duration="1200">
           <div className="col1">
             <h2>Make Your Own Cake Design</h2>
             <img src={Line2} alt="line" />
@@ -110,9 +123,9 @@ function Home() {
         </div>
       </section>
 
-      <section className="section3-home" id="about-section">
+      <section className="section3-home" id="about-section" >
         <div className="wrap">
-          <div className="content-about">
+          <div className="content-about" data-aos="fade-up" data-aos-duration="1200">
             <h2>ABOUT Heaven's</h2>
             <p className="how-we-got-here">How We Got Here</p>
             <p className="content-para">
@@ -128,7 +141,7 @@ function Home() {
       </section>
 
       <section className="section4-home">
-        <div className="main-content">
+        <div className="main-content" data-aos="fade-up" data-aos-duration="1200">
           <div className="text-content">
             <h2>heaven's special cake</h2>
             <img src={Line2} alt="Line Yellow" />
@@ -138,14 +151,14 @@ function Home() {
               laborum.
             </p>
           </div>
-          <div className="card-content">
+          <div className="card-content" data-aos="fade-up" data-aos-duration="1200">
             <Responsive />
           </div>
         </div>
       </section>
 
       <section className="section5-home">
-        <div className="wrap5">
+        <div className="wrap5" data-aos="fade-up" data-aos-duration="1200">
           <div className="text-content5">
             <h2>Become women entrepreneur on Heaven's</h2>
             <p className="content-women">
@@ -153,7 +166,7 @@ function Home() {
               eiusmod tempor incididunt ut labore et dolore magna aliqua."
             </p>
             <div className="button-section">
-            <Link to="/no-page"><button className="btn-home">
+              <Link to="/no-page"><button className="btn-home">
                 Start women entrepreneur journey
               </button></Link>
               <Link to="/no-page"><button className="btn-home-white">Avail Offer</button></Link>
@@ -166,7 +179,7 @@ function Home() {
       </section>
 
       <section className="section6-home">
-        <div className="main-content6">
+        <div className="main-content6" >
           <div className="text-content6">
             <h2 className="our-team">Our Team</h2>
             <img src={Line2} alt="Line Yellow" />
@@ -178,8 +191,8 @@ function Home() {
           </div>
           <div className="container">
             <div className="card-content6">
-              <div className="wrap-content-6">
-                <div className="card-content-6">
+              <div className="wrap-content-6" >
+                <div className="card-content-6" data-aos="fade-up" data-aos-duration="1200">
                   <img src={Card6} alt="Card-" />
                   <div className="card-text6">
                     <h3>Jenny Wilson</h3>
@@ -202,7 +215,7 @@ function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="card-content-6">
+                <div className="card-content-6" data-aos="fade-up" data-aos-duration="1200">
                   <img src={Card7} alt="Card-" />
                   <div className="card-text6">
                     <h3>Leslie Alexander</h3>
@@ -227,7 +240,7 @@ function Home() {
                 </div>
               </div>
               <div className="wrap-content-6">
-                <div className="card-content-6">
+                <div className="card-content-6" data-aos="fade-up" data-aos-duration="1200">
                   <img src={Card8} alt="Card-" />
                   <div className="card-text6">
                     <h3>Jane Cooper</h3>
@@ -250,7 +263,7 @@ function Home() {
                     </div>
                   </div>
                 </div>
-                <div className="card-content-6">
+                <div className="card-content-6" data-aos="fade-up" data-aos-duration="1200">
                   <img src={Card9} alt="Card-" />
                   <div className="card-text6">
                     <h3>Robert Fox</h3>

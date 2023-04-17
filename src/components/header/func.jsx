@@ -89,7 +89,7 @@ const Func = () => {
               {/* </li> */}
               <li>
                 <button className="custom-button">
-                  <Link to="/my-cart"> <AiOutlineShoppingCart /></Link>
+                  <Link to="/my-cart"><AiOutlineShoppingCart /></Link>
                 </button>
               </li>
             </ul>
@@ -165,7 +165,7 @@ const Func = () => {
                 <AiOutlineSearch />
               </span>
               <span className="shopping-cart">
-                <Link to="/your-orders"> <AiOutlineShoppingCart /></Link>
+                <Link to="/your-orders"><AiOutlineShoppingCart /></Link>
               </span>
             </div>
             <div

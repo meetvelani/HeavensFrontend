@@ -7,6 +7,7 @@ import Progressbar1 from "./progressbar";
 import { useParams } from "react-router-dom";
 import {  getOrderById } from "../apiCalls";
 import { toast } from "react-toastify";
+import AOS from 'aos';
 // import Footer from "../components/footer/footer"
 // import PropTypes from 'prop-types'
 
@@ -16,6 +17,11 @@ function TrackMyOrder(props) {
 
   const { id } = useParams()
   useEffect(() => {
+    window.scrollTo(0, 0)
+      AOS.init({
+        once: true,
+      }
+      );
     const fetchData = async () => {
       const token = sessionStorage.getItem("token") || ""
       const re = await getOrderById(token, id)
@@ -52,8 +58,8 @@ function TrackMyOrder(props) {
         </div> */}
           <br></br>
           {orders.map(order =>
-            <div>
-              <Progressbar1 orderStatus = {order.status} />
+            <div data-aos="fade-up" data-aos-duration="1200">
+              <Progressbar1 orderStatus = {order.status}  />
               <hr className="mt-5" />
 
               <div className="order-details">

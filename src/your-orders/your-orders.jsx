@@ -7,11 +7,18 @@ import { Link } from "react-router-dom";
 import { getOrder } from "../apiCalls";
 import { toast } from "react-toastify";
 import { domainName } from "../constants";
+import AOS from 'aos';
+
 
 function YourOrders() {
   const [orders, setOrders] = useState([])
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+    AOS.init({
+      once: true,
+    }
+    );
 
     const fetchData = async () => {
       const token = sessionStorage.getItem("token") || ""
@@ -39,8 +46,8 @@ function YourOrders() {
           <h1 className="shop-heading">Your Orders</h1>
           <hr className="line-yellow" />
           {orders.map(order =>
-            <div className="content">
-              <div className="content-1">
+            <div className="content" data-aos="fade-up" data-aos-duration="1200">
+              <div className="content-1" >
                 {/* <h3 className="delivery-date">Delivery Date: <DateTime /></h3> */}
                 {order.product.map(product =>
                   <div className="cake-content">

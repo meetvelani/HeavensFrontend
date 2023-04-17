@@ -1,5 +1,5 @@
-// export const domainName = "http://127.0.0.1:8000"
-export const domainName = "https://heavens-0frh.onrender.com"
+export const domainName = "http://127.0.0.1:8000"
+// export const domainName = "https://heavens-0frh.onrender.com"
 
 
 

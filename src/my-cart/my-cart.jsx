@@ -10,6 +10,9 @@ import { useStateValue } from "../StateProvider";
 import { toast } from "react-toastify";
 import CartIncDecCounter from "./cartProductIncDec";
 import { domainName } from "../constants";
+import AOS from 'aos';
+
+
 // import NavbarBlack from "../components/header/navbar-black";
 // import Footer from "../components/footer/footer";
 
@@ -81,6 +84,11 @@ function MyCart({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, 
 
 
   useEffect(() => {
+    window.scrollTo(0, 0)
+      AOS.init({
+        once: true,
+      }
+      );
 
     const fetchData = async () => {
       dispatch({
@@ -133,7 +141,7 @@ function MyCart({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, 
           <hr className="line-yellow" />
           {cartDetail.map(cartProduct =>
 
-            <div className="cake-content">
+            <div className="cake-content" data-aos="fade-up" data-aos-duration="1200">
               <div className="col-cake2">
                 <img src={domainName + "/uploads/" + cartProduct.image_1} alt="" />
               </div>
@@ -148,7 +156,7 @@ function MyCart({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, 
             </div>
           )}
 
-          <div className="coupon input-group btn-cake">
+          <div className="coupon input-group btn-cake" data-aos="fade-up" data-aos-duration="1200">
             <input
               type="text"
               ref={couponCodeRef}
@@ -164,8 +172,8 @@ function MyCart({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, 
           <div className='input-error'>{couponCodeStatus.error}</div>
           <div className='input-success'>{couponCodeStatus.success}</div>
 
-          <hr className="line-gray" />
-          <div className="order-details">
+          <hr className="line-gray" data-aos="fade-up" data-aos-duration="1200" />
+          <div className="order-details" data-aos="fade-up" data-aos-duration="1200">
             <div className="container">
               <h3 className="order-summary">Order Summary</h3>
               {cartDetail.map(cartProduct =>

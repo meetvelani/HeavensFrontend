@@ -16,6 +16,8 @@ import { createOrder, deleteDeliveryAddress, getAddress } from "../../apiCalls";
 // import { Container } from "react-bootstrap";
 import { toast } from "react-toastify";
 import { displayRazorpay } from "../Razorpay";
+import AOS from 'aos';
+
 
 function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail, cartTotal, setCartTotal, setCartSubTotal, cartSubTotal, discountAmount }) {
   // static propTypes = {};
@@ -107,6 +109,11 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
 
   }
   useEffect(() => {
+    window.scrollTo(0, 0)
+      AOS.init({
+        once: true,
+      }
+      );
 
     const fetchData = async () => {
       const token = sessionStorage.getItem("token") || ""
@@ -135,7 +142,7 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
           <div className="check-out">
             <h2>Checkout</h2>
             <hr className="line-yellow" />
-            <div className="content-1">
+            <div className="content-1" data-aos="fade-up" data-aos-duration="1200">
               <h5>Select Delivery address</h5>
               {deliveryAddress.map(address =>
                 <div className={address.pk === selectedAddressId ? "address-Container selected-address" : "address-Container"} id={address.pk} onClick={() => selectAddress(address)}>
@@ -150,7 +157,7 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
                 Deliver to this Address
               </button>
             </div> */}
-            <div className="btn-row-bk mt-4">
+            <div className="btn-row-bk mt-4" data-aos="fade-up" data-aos-duration="1200">
               <div className="btn-col-3 col mb-4">
                 <Link to="/add-address"><button className="next-btn1 btn btn-dark">Add Address</button></Link>
               </div>
@@ -164,21 +171,22 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
                 </div>
               </div>
             </div>
-            <div className="select-payment">
+            <div className="select-payment" data-aos="fade-up" data-aos-duration="1200">
               <h5 className="mb-4">Select Payment Method</h5>
-              <button className={PaymentType === "Prepaid" ? "btn btn-outline-secondary p-3 pay-btn-cake active" : "btn btn-outline-secondary p-3 pay-btn-cake "} onClick={() => setPaymentMethod("Prepaid")}>
+              <button className={PaymentType === "Prepaid" ? "btn btn-outline-secondary p-3 pay-btn-cake active" : "btn btn-outline-secondary p-3 pay-btn-cake "} onClick={() => setPaymentMethod("Prepaid")} >
                 {/* <FcGoogle /> Google Pay */}
                 Pay Online
               </button>
-              <button className={PaymentType === "COD" ? "btn btn-outline-secondary p-3 pay-btn-cake mt-3 active" : "btn btn-outline-secondary p-3 pay-btn-cake mt-3"} onClick={() => setPaymentMethod("COD")}>
+              <button className={PaymentType === "COD" ? "btn btn-outline-secondary p-3 pay-btn-cake mt-3 active" : "btn btn-outline-secondary p-3 pay-btn-cake mt-3"} onClick={() => setPaymentMethod("COD")} >
                 Pay On Delivery
               </button>
             </div>
             {/* <hr /> */}
-            <div className="content-2">
+
+            <div className="content-2" >
               {cartDetail.map(cartProduct =>
 
-                <div className="row-cake-co mt-4">
+                <div className="row-cake-co mt-4" data-aos="fade-up" data-aos-duration="1200">
                   <div className="col-img ">
                     <img src={domainName + "/uploads/" + cartProduct.image_1} alt="" />
                   </div>
@@ -191,8 +199,8 @@ function Checkout({ orderData, setOrderData, nextStep, cartDetail, setCartDetail
               )}
 
             </div>
-            <hr className="line-hr mt-5" />
-            <div className="order-details mt-5">
+            <hr className="line-hr mt-5" data-aos="fade-up" data-aos-duration="1200" />
+            <div className="order-details mt-5" data-aos="fade-up" data-aos-duration="1200">
               <div className="container">
                 <h3 className="order-summary mb-4">Order Summary</h3>
                 {cartDetail.map(cartProduct =>

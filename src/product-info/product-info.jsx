@@ -18,6 +18,7 @@ import { toast } from "react-toastify";
 import { useStateValue } from "../StateProvider";
 import { domainName } from "../constants";
 import ResponsiveCart from "./slider-you-may-also-like";
+import AOS from 'aos';
 // import { toast } from "react-toastify";
 
 
@@ -72,6 +73,7 @@ function OffCanvasExample({ name, product, quantity, setQuantity, ...props }) {
 
     }
   };
+  
 
   return (
     <>
@@ -140,6 +142,12 @@ function ProductInfo() {
   // const [error, setError] = useState(null);
 
   useEffect(() => {
+      window.scrollTo(0, 0)
+      AOS.init({
+        once: true,
+      }
+      );
+  
 
     const fetchProduct = async (id) => {
       // try {
@@ -176,13 +184,13 @@ function ProductInfo() {
               {(product !== "") ?
 
                 <div className=" whole-div-slider-cart-details">
-                  <div className=" whole-content">
+                  <div className="whole-content">
                     <div
                       id="carouselExampleControls"
                       className="carousel slide"
                       data-bs-ride="carousel"
                     >
-                      <div className="carousel-inner">
+                      <div className="carousel-inner" data-aos="fade-up" data-aos-duration="1200">
                         <div className="carousel-item active">
                           <img src={domainName + product["image_1"]} className="d-block w-100" alt="..." />
                         </div>
@@ -206,6 +214,7 @@ function ProductInfo() {
                         type="button"
                         data-bs-target="#carouselExampleControls"
                         data-bs-slide="prev"
+                        data-aos="fade-up" data-aos-duration="1200"
                       >
                         <span
                           className="carousel-control-prev-icon"
@@ -218,6 +227,7 @@ function ProductInfo() {
                         type="button"
                         data-bs-target="#carouselExampleControls"
                         data-bs-slide="next"
+                        data-aos="fade-up" data-aos-duration="1200"
                       >
                         <span
                           className="carousel-control-next-icon"
@@ -227,7 +237,7 @@ function ProductInfo() {
                       </button>
                     </div>
                   </div>
-                  <div className=" cart-details">
+                  <div className=" cart-details" data-aos="fade-up" data-aos-duration="1200">
                     <h3>{product.title}</h3>
                     <h3>Rs {product.price}</h3>
                     {/* <p>
@@ -309,10 +319,10 @@ function ProductInfo() {
             {/* <div className="col-4"></div> */}
           </div>
         </div>
-        <div className=" mb-5 container p-4 pl-5">
+        <div className=" mb-5 container p-4 pl-5" data-aos="fade-up" data-aos-duration="1200" >
           <h1 className="mt-3 you-might-also-like">You Might Also Like</h1>
           <hr className="line-yellow" />
-          <ResponsiveCart />
+          <ResponsiveCart  />
         </div>
       </div>
     </div>

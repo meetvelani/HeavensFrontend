@@ -12,14 +12,16 @@
     }
 
     .whole-div-slider-cart-details {
-        padding-top: 15%;
-        padding-left: 15%;
+        padding-top: 110px;
+        padding-left: 10%;
         padding-bottom: 16%;
         display: flex;
         gap: 24px;
-
+        .whole-content{
+            width: min(369px,100%);
+        }
         img {
-            width: 369px !important;
+            width: min(369px,100%) ;
             height: 369px;
         }
     }

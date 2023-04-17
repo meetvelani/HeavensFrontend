@@ -28,6 +28,8 @@ import jwt_decode from "jwt-decode";
 import ProductInfo from "./product-info/product-info";
 import PlaceOrder from "./my-cart/place-order";
 import UpdateAddress from "./update-address/update-address";
+import 'aos/dist/aos.css';
+
 
 
 function App() {
